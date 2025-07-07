@@ -1,9 +1,7 @@
-torch>=1.7
-transformers==4.15.0
-datasets==2.0.0
+transformers[torch]
+datasets
 pytrec_eval
-deepspeed==0.6.0
-ir_datasets==0.5.0
-pyserini==0.15.0
-tqdm
-numpy
+deepspeed==0.14.5
+pyserini
+flash-attn==2.8.0.post2
+qwen_vl_utils

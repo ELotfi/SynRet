@@ -24,7 +24,7 @@ deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --seed 1234 \
     --do_train \
     --fp16 \
-    --train_file ../../data/synret_50k.jsonl \
+    --train_file ../data/synret_50k.jsonl \
     --q_max_len 50 \
     --p_max_len 450 \
     --train_n_passages 2 \
@@ -38,7 +38,7 @@ deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --share_encoder True \
     --logging_steps 50 \
     --output_dir "${OUTPUT_DIR}" \
-	--data_dir ../../data \
+	--data_dir ../data \
     --save_total_limit 2 \
     --save_strategy epoch \
     --eval_strategy epoch \

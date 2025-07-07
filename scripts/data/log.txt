@@ -1430,3 +1430,286 @@ weight_decay=0.0,
 [2025-07-04 08:37:17,446 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
 [2025-07-04 08:37:17,446 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
 [2025-07-04 08:37:17,446 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 11:28:59,365 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmpb1mjmy7e/test.c -o /tmp/tmpb1mjmy7e/test.o
+[2025-07-07 11:28:59,388 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmpb1mjmy7e/test.o -laio -o /tmp/tmpb1mjmy7e/a.out
+[2025-07-07 11:28:59,424 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmp2zmiqt5j/test.c -o /tmp/tmp2zmiqt5j/test.o
+[2025-07-07 11:28:59,446 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmp2zmiqt5j/test.o -laio -o /tmp/tmp2zmiqt5j/a.out
+[2025-07-07 11:29:00,574 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=../data,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=1,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.EPOCH,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1128.46/runs/Jul07_11-28-59_687641d39a4d,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=50,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1128.46,
+overwrite_output_dir=True,
+p_max_len=450,
+past_index=-1,
+per_device_eval_batch_size=32,
+per_device_train_batch_size=16,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1128.46,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.EPOCH,
+save_total_limit=2,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=../data/synret_50k.jsonl,
+train_n_passages=2,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=1000,
+weight_decay=0.0,
+)
+[2025-07-07 11:29:14,827 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-07 11:29:14,913 INFO] Vocab size: 250002
+[2025-07-07 11:29:15,480 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 11:29:15,481 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
+[2025-07-07 11:29:15,484 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 11:29:15,597 WARNING] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
