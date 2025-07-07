@@ -37,10 +37,12 @@ def _compute_metrics(args: Arguments, eval_pred: EvalPrediction) -> Dict[str, fl
     labels = torch.arange(0, scores.shape[0], dtype=torch.long) * args.train_n_passages
     labels = labels % scores.shape[1]
 
-    topk_metrics = accuracy(output=scores, target=labels, topk=(1, 3))
+    #topk_metrics = accuracy(output=scores, target=labels, topk=(1, 3))
+    topk_metrics = accuracy(output=scores, target=labels, topk=(1,))
     mrr = batch_mrr(output=scores, target=labels)
 
-    return {'mrr': mrr, 'acc1': topk_metrics[0], 'acc3': topk_metrics[1]}
+    #return {'mrr': mrr, 'acc1': topk_metrics[0], 'acc3': topk_metrics[1]}
+    return {'mrr': mrr, 'acc1': topk_metrics[0]}
 
 
 def main():
