@@ -45,21 +45,23 @@ class BiencoderTrainer(Trainer):
         if self.tokenizer is not None:
             self.tokenizer.save_pretrained(output_dir)
 
-    def compute_loss(self, model, inputs, return_outputs=False):
+    def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
         query, passage = _unpack_qp(inputs)
         outputs: BiencoderOutput = model(query=query, passage=passage)
         loss = outputs.loss
 
         if self.model.training:
-            step_acc1, step_acc3 = accuracy(output=outputs.scores.detach(), target=outputs.labels, topk=(1, 3))
+            #step_acc1, step_acc3 = accuracy(output=outputs.scores.detach(), target=outputs.labels, topk=(1, 3))
+            step_acc1 = accuracy(output=outputs.scores.detach(), target=outputs.labels)[0]
             step_mrr = batch_mrr(output=outputs.scores.detach(), target=outputs.labels)
 
             self.acc1_meter.update(step_acc1)
-            self.acc3_meter.update(step_acc3)
+            #self.acc3_meter.update(step_acc3)
             self.mrr_meter.update(step_mrr)
 
             if self.state.global_step > 0 and self.state.global_step % self.args.logging_steps == 0:
-                log_info = ', '.join(map(str, [self.mrr_meter, self.acc1_meter, self.acc3_meter]))
+                #log_info = ', '.join(map(str, [self.mrr_meter, self.acc1_meter, self.acc3_meter]))
+                log_info = ', '.join(map(str, [self.mrr_meter, self.acc1_meter]))
                 logger.info('step: {}, {}'.format(self.state.global_step, log_info))
 
             self._reset_meters_if_needed()

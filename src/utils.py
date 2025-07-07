@@ -77,7 +77,7 @@ def full_contrastive_scores_and_labels(
 
     train_n_passages = key.shape[0] // query.shape[0]
 
-    batch_size = key.shape[0]
+    batch_size = query.shape[0]
 	# batch_size x (batch_size x n_psg)
     if use_in_batch_negs:
         qk = torch.mm(query, key.t())

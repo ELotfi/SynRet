@@ -49,9 +49,9 @@ class BiencoderModel(nn.Module):
         scores, labels, q_reps, p_reps, all_scores, all_labels = self._compute_scores(query, passage)
 
         start = self.args.process_index * q_reps.shape[0]
-        group_indices = select_grouped_indices(scores=scores,
-                                               group_size=self.args.train_n_passages,
-                                               start=start * self.args.train_n_passages)
+        # group_indices = select_grouped_indices(scores=scores,
+        #                                        group_size=self.args.train_n_passages,
+        #                                        start=start * self.args.train_n_passages)
 
         if not self.args.do_kd_biencoder:
             # training biencoder from scratch

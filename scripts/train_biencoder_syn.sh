@@ -13,7 +13,7 @@ fi
 mkdir -p "${OUTPUT_DIR}"
 
 PROC_PER_NODE=$(nvidia-smi --list-gpus | wc -l)
-CUDA_VISIBLE_DEVICES=0
+#CUDA_VISIBLE_DEVICES=0
 # python -u -m torch.distributed.launch --nproc_per_node ${PROC_PER_NODE} src/train_biencoder.py \
 deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --model_name_or_path intfloat/multilingual-e5-base \

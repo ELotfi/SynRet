@@ -1713,3 +1713,1995 @@ weight_decay=0.0,
 [2025-07-07 11:29:15,481 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
 [2025-07-07 11:29:15,484 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
 [2025-07-07 11:29:15,597 WARNING] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2025-07-07 16:32:41,295 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmp70gxknga/test.c -o /tmp/tmp70gxknga/test.o
+[2025-07-07 16:32:41,312 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmp70gxknga/test.o -laio -o /tmp/tmp70gxknga/a.out
+[2025-07-07 16:32:42,250 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=../data,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=1,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.EPOCH,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1632.23/runs/Jul07_16-32-41_e1c4797a5253,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1632.23,
+overwrite_output_dir=True,
+p_max_len=450,
+past_index=-1,
+per_device_eval_batch_size=32,
+per_device_train_batch_size=16,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1632.23,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.EPOCH,
+save_total_limit=2,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=../data/synret_50k.jsonl,
+train_n_passages=2,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=1000,
+weight_decay=0.0,
+)
+[2025-07-07 16:32:51,158 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-07 16:32:51,261 INFO] Vocab size: 250002
+[2025-07-07 16:32:51,825 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:32:51,825 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
+[2025-07-07 16:32:51,826 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:36:32,337 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmpog1vug18/test.c -o /tmp/tmpog1vug18/test.o
+[2025-07-07 16:36:32,356 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmpog1vug18/test.o -laio -o /tmp/tmpog1vug18/a.out
+[2025-07-07 16:36:33,642 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=../data,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=1,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.EPOCH,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1636.16/runs/Jul07_16-36-32_e1c4797a5253,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1636.16,
+overwrite_output_dir=True,
+p_max_len=450,
+past_index=-1,
+per_device_eval_batch_size=32,
+per_device_train_batch_size=16,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1636.16,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.EPOCH,
+save_total_limit=2,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=../data/synret_50k.jsonl,
+train_n_passages=2,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=1000,
+weight_decay=0.0,
+)
+[2025-07-07 16:36:35,391 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-07 16:36:35,503 INFO] Vocab size: 250002
+[2025-07-07 16:36:35,919 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:36:35,919 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
+[2025-07-07 16:36:35,919 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:37:44,413 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmpr5giiwsd/test.c -o /tmp/tmpr5giiwsd/test.o
+[2025-07-07 16:37:44,430 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmpr5giiwsd/test.o -laio -o /tmp/tmpr5giiwsd/a.out
+[2025-07-07 16:37:45,387 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=../data,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=1,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.EPOCH,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1637.29/runs/Jul07_16-37-44_e1c4797a5253,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1637.29,
+overwrite_output_dir=True,
+p_max_len=450,
+past_index=-1,
+per_device_eval_batch_size=32,
+per_device_train_batch_size=16,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1637.29,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.EPOCH,
+save_total_limit=2,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=../data/synret_50k.jsonl,
+train_n_passages=2,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=1000,
+weight_decay=0.0,
+)
+[2025-07-07 16:37:47,020 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-07 16:37:47,084 INFO] Vocab size: 250002
+[2025-07-07 16:37:47,494 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:37:47,494 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
+[2025-07-07 16:37:47,494 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:41:20,886 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmp_vzxt7ki/test.c -o /tmp/tmp_vzxt7ki/test.o
+[2025-07-07 16:41:20,905 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmp_vzxt7ki/test.o -laio -o /tmp/tmp_vzxt7ki/a.out
+[2025-07-07 16:41:21,910 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=../data,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=1,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.EPOCH,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1641.06/runs/Jul07_16-41-20_e1c4797a5253,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1641.06,
+overwrite_output_dir=True,
+p_max_len=450,
+past_index=-1,
+per_device_eval_batch_size=32,
+per_device_train_batch_size=16,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1641.06,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.EPOCH,
+save_total_limit=2,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=../data/synret_50k.jsonl,
+train_n_passages=2,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=1000,
+weight_decay=0.0,
+)
+[2025-07-07 16:41:23,619 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-07 16:41:23,690 INFO] Vocab size: 250002
+[2025-07-07 16:41:24,115 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:41:24,115 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
+[2025-07-07 16:41:24,115 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:47:56,249 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmppcvatfu0/test.c -o /tmp/tmppcvatfu0/test.o
+[2025-07-07 16:47:56,268 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmppcvatfu0/test.o -laio -o /tmp/tmppcvatfu0/a.out
+[2025-07-07 16:47:57,655 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=../data,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=1,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.EPOCH,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1647.41/runs/Jul07_16-47-56_e1c4797a5253,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1647.41,
+overwrite_output_dir=True,
+p_max_len=450,
+past_index=-1,
+per_device_eval_batch_size=32,
+per_device_train_batch_size=16,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1647.41,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.EPOCH,
+save_total_limit=2,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=../data/synret_50k.jsonl,
+train_n_passages=2,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=1000,
+weight_decay=0.0,
+)
+[2025-07-07 16:47:59,333 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-07 16:47:59,394 INFO] Vocab size: 250002
+[2025-07-07 16:47:59,808 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:47:59,809 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
+[2025-07-07 16:47:59,809 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:50:44,580 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmpr7grv3wi/test.c -o /tmp/tmpr7grv3wi/test.o
+[2025-07-07 16:50:44,599 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmpr7grv3wi/test.o -laio -o /tmp/tmpr7grv3wi/a.out
+[2025-07-07 16:50:45,786 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=../data,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=1,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.EPOCH,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1650.29/runs/Jul07_16-50-44_e1c4797a5253,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1650.29,
+overwrite_output_dir=True,
+p_max_len=450,
+past_index=-1,
+per_device_eval_batch_size=32,
+per_device_train_batch_size=16,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=/root/SynRet/checkpoint/biencoder_syn_2025-07-07-1650.29,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.EPOCH,
+save_total_limit=2,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=../data/synret_50k.jsonl,
+train_n_passages=2,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=1000,
+weight_decay=0.0,
+)
+[2025-07-07 16:50:47,509 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-07 16:50:47,571 INFO] Vocab size: 250002
+[2025-07-07 16:50:47,990 INFO] Sample 28883 of the training set: {'task_type': 'll', 'task_desc': 'Given a document that supports a debatable argument, find documents that contain opposite arguments.', 'q': "De impact van smartphones op de sociale interactie van jongeren wordt vaak als negatief beschreven. Er wordt gesuggereerd dat voortdurende smartphonegebruik leidt tot verminderd face-to-face contact, isolatie en een afname van communicatieve vaardigheden. Veel ouders en opvoeders maken zich zorgen dat jongeren meer tijd doorbrengen achter schermen dan in persoonlijke interacties, wat kan resulteren in een eenzijdige ontwikkeling van sociale competenties. Onderzoekers wijzen erop dat frequente meldingen via sociale media en ononderbroken toegang tot entertainment en games een afleidende factor vormen die de kwaliteit van echte relaties ondermijnt. Daarnaast wordt er gedacht dat overmatig gebruik van gadgets bij jongeren kan leiden tot verslaving, met negatieve gevolgen voor hun geestelijke gezondheid. Er wordt daarom gepleit voor strengere maatregelen en meer bewustwordingsprogramma's om jongeren te stimuleren fysieke maatschappelijke interacties te ervaren en de balans tussen online en offline leven te herstellen.", 'pos': "In de afgelopen jaren zijn smartphones uitgegroeid tot onmisbare apparaten die de manier waarop jongeren communiceren en informatie delen hebben veranderd. Hoewel er zorgen zijn over de mogelijke negatieve effecten van overmatig gebruik, tonen recente studies aan dat smartphones ook voordelen bieden voor sociale verbindingen. Jongeren gebruiken apps zoals WhatsApp, Instagram en TikTok om contact te houden met vrienden, nieuwe mensen te ontmoeten en deel uit te maken van online gemeenschappen. Deze digitale interacties kunnen zelfs leiden tot het versterken van sociale banden, het bieden van steun in moeilijke tijden en het bevorderen van inclusiviteit. Bovendien stelt de draagbare technologie jongeren in staat om snel informatie te verkrijgen, creatief te zijn en vaardigheden te ontwikkelen die essentieel zijn in de moderne samenleving. Onderwijsprogramma's integreren technologie op een wijze die samenwerking en communicatie bevordert, waardoor smartphones niet alleen hulpmiddelen voor entertainment zijn, maar ook instruments voor sociale en persoonlijke ontwikkeling.", 'neg': 'Hoewel gadgets zoals smartphones populair zijn onder jongeren, werpen sommige critici vraagtekens op bij de effectiviteit van technologische hulpmiddelen in educatie. Zij beweren dat de constante afleiding en de invasieve aard van notificaties kunnen leiden tot lagere concentratie en productiviteit in klaslokalen. Bovendien constateert men dat niet alle digitale platforms bedrijvig en bovendien schadelijk kunnen zijn, vooral als ze worden gebruikt zonder toezicht. Het is daarom belangrijk om beperkingen te overwegen en richtlijnen te ontwikkelen voor verantwoord gebruik, zodat de negatieve elementen niet de overhand krijgen. In scholen worden daarom vaak beleidsregels ingevoerd die het gebruik van smartphones beperken tijdens lestijden, met het doel leerlingen te helpen zich meer te richten op face-to-face interacties en minder op digitale afleiding. Hoewel technologie zeker voordelen biedt, blijft het essentieel om de juiste balans te vinden en de negatieve invloeden zoveel mogelijk te mitigeren.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:50:47,990 INFO] Sample 7657 of the training set: {'task_type': 'sts', 'task_desc': '', 'q': 'Om een perfecte tomatensaus te maken, kook je verse tomaten met knoflook en kruiden gedurende 30 minuten.', 'pos': 'Voor een heerlijke tomatensaus kook je verse tomaten samen met knoflook en basilicum ongeveer een halfuur.', 'neg': 'Je kunt verse tomaten gebruiken om een simpele saus te bereiden door ze te koken met wat kruiden.', 'scores': {'pos': 0.9, 'neg': 0.7}}.
+[2025-07-07 16:50:47,990 INFO] Sample 490 of the training set: {'task_type': 'ls', 'task_desc': 'Identifying the intent or scenario of a user utterance, input, query or command.', 'q': 'In de context van industriële vloeistofsystemen is het van cruciaal belang om mechanische componenten te selecteren die niet alleen bestand zijn tegen de variabele druk en temperaturen binnen een proceslijn, maar ook compatibel zijn met de chemische eigenschappen van het vervoerde medium. Het bepalen van de juiste afdichtingen en lagers draagt aanzienlijk bij aan het minimaliseren van mechanische slijtage en het voorkomen van lekkages die kunnen leiden tot productieonderbrekingen of veiligheidsincidenten. Bovendien vereist de integratie van regelkleppen en pompstations in deze systemen een grondige analyse van de doorstroomsnelheden en het cavitatiepotentieel, waarbij dynamische simulaties vaak worden ingezet om optimale prestaties te garanderen. Het combineren van duurzame materialen met geavanceerde monitoringtechnieken resulteert in een efficiënte fluid handling die voldoet aan industriële normen en milieuvoorschriften.', 'pos': 'Vloeistofhantering in industriële toepassingen', 'neg': 'Procesautomatisering en controlesystemen', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-07 16:50:52,333 INFO] {'loss': 0.4096, 'grad_norm': 20.83108139038086, 'learning_rate': 6.666666666666668e-06, 'epoch': 0.006397952655150352}
+[2025-07-07 16:50:52,361 INFO] step: 10, mrr: 89.49, Acc@1: 79.55
+[2025-07-07 16:50:53,467 INFO] {'loss': 0.3967, 'grad_norm': 12.310632705688477, 'learning_rate': 8.673533304426543e-06, 'epoch': 0.012795905310300703}
+[2025-07-07 16:50:53,493 INFO] step: 20, mrr: 90.33, Acc@1: 81.25
+[2025-07-07 16:50:54,555 INFO] {'loss': 0.3244, 'grad_norm': 13.722285270690918, 'learning_rate': 9.847475031464418e-06, 'epoch': 0.019193857965451054}
+[2025-07-07 16:50:54,583 INFO] step: 30, mrr: 90.93, Acc@1: 82.46
+[2025-07-07 16:50:55,642 INFO] {'loss': 0.3261, 'grad_norm': 14.12922477722168, 'learning_rate': 1.0680399942186417e-05, 'epoch': 0.025591810620601407}
+[2025-07-07 16:50:55,668 INFO] step: 40, mrr: 91.39, Acc@1: 83.38
+[2025-07-07 16:50:56,761 INFO] {'loss': 0.365, 'grad_norm': 14.065678596496582, 'learning_rate': 1.1326466695573459e-05, 'epoch': 0.03198976327575176}
+[2025-07-07 16:50:56,793 INFO] step: 50, mrr: 91.3, Acc@1: 83.09
+[2025-07-07 16:50:57,931 INFO] {'loss': 0.3135, 'grad_norm': 13.006048202514648, 'learning_rate': 1.1854341669224292e-05, 'epoch': 0.03838771593090211}
+[2025-07-07 16:50:57,961 INFO] step: 60, mrr: 91.34, Acc@1: 83.09
+[2025-07-07 16:50:59,123 INFO] {'loss': 0.3448, 'grad_norm': 16.813955307006836, 'learning_rate': 1.2300653600095047e-05, 'epoch': 0.044785668586052464}
+[2025-07-07 16:50:59,154 INFO] step: 70, mrr: 91.77, Acc@1: 83.89
+[2025-07-07 16:51:00,318 INFO] {'loss': 0.2544, 'grad_norm': 12.29713249206543, 'learning_rate': 1.2687266579946291e-05, 'epoch': 0.05118362124120281}
+[2025-07-07 16:51:00,352 INFO] step: 80, mrr: 92.13, Acc@1: 84.65
+[2025-07-07 16:51:01,488 INFO] {'loss': 0.295, 'grad_norm': 9.978156089782715, 'learning_rate': 1.3028283396262167e-05, 'epoch': 0.05758157389635317}
+[2025-07-07 16:51:01,516 INFO] step: 90, mrr: 92.41, Acc@1: 85.16
+[2025-07-07 16:51:02,578 INFO] {'loss': 0.2366, 'grad_norm': 7.377335071563721, 'learning_rate': 1.3333333333333337e-05, 'epoch': 0.06397952655150352}
+[2025-07-07 16:51:02,602 INFO] step: 100, mrr: 92.57, Acc@1: 85.46
+[2025-07-07 16:51:03,754 INFO] {'loss': 0.2583, 'grad_norm': 14.759119987487793, 'learning_rate': 1.3609284567721503e-05, 'epoch': 0.07037747920665387}
+[2025-07-07 16:51:03,784 INFO] step: 110, mrr: 92.79, Acc@1: 85.87
+[2025-07-07 16:51:04,853 INFO] {'loss': 0.2674, 'grad_norm': 27.156782150268555, 'learning_rate': 1.3861208306984167e-05, 'epoch': 0.07677543186180422}
+[2025-07-07 16:51:04,880 INFO] step: 120, mrr: 93.03, Acc@1: 86.31
+[2025-07-07 16:51:06,018 INFO] {'loss': 0.2693, 'grad_norm': 14.709671020507812, 'learning_rate': 1.409295568204558e-05, 'epoch': 0.08317338451695458}
+[2025-07-07 16:51:06,052 INFO] step: 130, mrr: 93.01, Acc@1: 86.26
+[2025-07-07 16:51:07,189 INFO] {'loss': 0.2286, 'grad_norm': 17.64199447631836, 'learning_rate': 1.4307520237854922e-05, 'epoch': 0.08957133717210493}
+[2025-07-07 16:51:07,223 INFO] step: 140, mrr: 93.13, Acc@1: 86.48
+[2025-07-07 16:51:08,337 INFO] {'loss': 0.2266, 'grad_norm': 10.80226993560791, 'learning_rate': 1.4507275060371209e-05, 'epoch': 0.09596928982725528}
+[2025-07-07 16:51:08,371 INFO] step: 150, mrr: 93.27, Acc@1: 86.75
+[2025-07-07 16:51:09,484 INFO] {'loss': 0.2395, 'grad_norm': 11.228506088256836, 'learning_rate': 1.4694133217706166e-05, 'epoch': 0.10236724248240563}
+[2025-07-07 16:51:09,510 INFO] step: 160, mrr: 93.28, Acc@1: 86.8
+[2025-07-07 16:51:10,615 INFO] {'loss': 0.2812, 'grad_norm': 16.119287490844727, 'learning_rate': 1.4869659475855163e-05, 'epoch': 0.10876519513755598}
+[2025-07-07 16:51:10,646 INFO] step: 170, mrr: 93.29, Acc@1: 86.84
+[2025-07-07 16:51:11,769 INFO] {'loss': 0.1613, 'grad_norm': 10.973191261291504, 'learning_rate': 1.5035150034022042e-05, 'epoch': 0.11516314779270634}
+[2025-07-07 16:51:11,800 INFO] step: 180, mrr: 93.4, Acc@1: 87.05
+[2025-07-07 16:51:12,887 INFO] {'loss': 0.3458, 'grad_norm': 16.36260414123535, 'learning_rate': 1.5191690673018861e-05, 'epoch': 0.12156110044785669}
+[2025-07-07 16:51:12,917 INFO] step: 190, mrr: 93.44, Acc@1: 87.17
+[2025-07-07 16:51:14,044 INFO] {'loss': 0.2079, 'grad_norm': 12.777920722961426, 'learning_rate': 1.5340199971093208e-05, 'epoch': 0.12795905310300704}
+[2025-07-07 16:51:14,069 INFO] step: 200, mrr: 93.49, Acc@1: 87.28
+[2025-07-07 16:51:15,194 INFO] {'loss': 0.1913, 'grad_norm': 18.09288215637207, 'learning_rate': 1.5481461964892795e-05, 'epoch': 0.1343570057581574}
+[2025-07-07 16:51:15,231 INFO] step: 210, mrr: 93.59, Acc@1: 87.53
+[2025-07-07 16:51:16,363 INFO] {'loss': 0.2336, 'grad_norm': 7.977358818054199, 'learning_rate': 1.5616151205481378e-05, 'epoch': 0.14075495841330773}
+[2025-07-07 16:51:16,397 INFO] step: 220, mrr: 93.71, Acc@1: 87.75
+[2025-07-07 16:51:17,580 INFO] {'loss': 0.2044, 'grad_norm': 8.950390815734863, 'learning_rate': 1.5744852240117287e-05, 'epoch': 0.1471529110684581}
+[2025-07-07 16:51:17,607 INFO] step: 230, mrr: 93.75, Acc@1: 87.82
+[2025-07-07 16:51:18,714 INFO] {'loss': 0.1545, 'grad_norm': 8.581847190856934, 'learning_rate': 1.586807494474404e-05, 'epoch': 0.15355086372360843}
+[2025-07-07 16:51:18,741 INFO] step: 240, mrr: 93.89, Acc@1: 88.1
+[2025-07-07 16:51:19,822 INFO] {'loss': 0.2346, 'grad_norm': 7.07781982421875, 'learning_rate': 1.598626672448025e-05, 'epoch': 0.1599488163787588}
+[2025-07-07 16:51:19,846 INFO] step: 250, mrr: 93.91, Acc@1: 88.12
+[2025-07-07 16:51:20,967 INFO] {'loss': 0.1823, 'grad_norm': 6.255715370178223, 'learning_rate': 1.6099822319805453e-05, 'epoch': 0.16634676903390916}
+[2025-07-07 16:51:20,997 INFO] step: 260, mrr: 94.01, Acc@1: 88.31
+[2025-07-07 16:51:22,112 INFO] {'loss': 0.3159, 'grad_norm': 18.626401901245117, 'learning_rate': 1.620909176105992e-05, 'epoch': 0.1727447216890595}
+[2025-07-07 16:51:22,136 INFO] step: 270, mrr: 94.03, Acc@1: 88.33
+[2025-07-07 16:51:23,233 INFO] {'loss': 0.1577, 'grad_norm': 18.69927215576172, 'learning_rate': 1.6314386875614796e-05, 'epoch': 0.17914267434420986}
+[2025-07-07 16:51:23,257 INFO] step: 280, mrr: 94.13, Acc@1: 88.55
+[2025-07-07 16:51:24,380 INFO] {'loss': 0.207, 'grad_norm': 19.839082717895508, 'learning_rate': 1.6415986652659708e-05, 'epoch': 0.1855406269993602}
+[2025-07-07 16:51:24,415 INFO] step: 290, mrr: 94.17, Acc@1: 88.62
+[2025-07-07 16:51:25,573 INFO] {'loss': 0.2088, 'grad_norm': 26.85717010498047, 'learning_rate': 1.6514141698131085e-05, 'epoch': 0.19193857965451055}
+[2025-07-07 16:51:25,597 INFO] step: 300, mrr: 94.23, Acc@1: 88.73
+[2025-07-07 16:51:26,690 INFO] {'loss': 0.2073, 'grad_norm': 31.582874298095703, 'learning_rate': 1.6609077958895154e-05, 'epoch': 0.19833653230966092}
+[2025-07-07 16:51:26,716 INFO] step: 310, mrr: 94.26, Acc@1: 88.79
+[2025-07-07 16:51:27,806 INFO] {'loss': 0.1938, 'grad_norm': 23.773019790649414, 'learning_rate': 1.670099985546604e-05, 'epoch': 0.20473448496481125}
+[2025-07-07 16:51:27,840 INFO] step: 320, mrr: 94.3, Acc@1: 88.84
+[2025-07-07 16:51:28,944 INFO] {'loss': 0.176, 'grad_norm': 9.710785865783691, 'learning_rate': 1.679009293251925e-05, 'epoch': 0.21113243761996162}
+[2025-07-07 16:51:28,974 INFO] step: 330, mrr: 94.34, Acc@1: 88.94
+[2025-07-07 16:51:30,129 INFO] {'loss': 0.2199, 'grad_norm': 16.45360565185547, 'learning_rate': 1.6876526113615038e-05, 'epoch': 0.21753039027511195}
+[2025-07-07 16:51:30,164 INFO] step: 340, mrr: 94.42, Acc@1: 89.08
+[2025-07-07 16:51:31,226 INFO] {'loss': 0.213, 'grad_norm': 13.879708290100098, 'learning_rate': 1.6960453629001838e-05, 'epoch': 0.22392834293026231}
+[2025-07-07 16:51:31,257 INFO] step: 350, mrr: 94.43, Acc@1: 89.1
+[2025-07-07 16:51:32,427 INFO] {'loss': 0.1876, 'grad_norm': 23.309844970703125, 'learning_rate': 1.704201667178192e-05, 'epoch': 0.23032629558541268}
+[2025-07-07 16:51:32,455 INFO] step: 360, mrr: 94.51, Acc@1: 89.28
+[2025-07-07 16:51:33,633 INFO] {'loss': 0.0645, 'grad_norm': 12.62234878540039, 'learning_rate': 1.7121344827113302e-05, 'epoch': 0.236724248240563}
+[2025-07-07 16:51:33,666 INFO] step: 370, mrr: 94.62, Acc@1: 89.5
+[2025-07-07 16:51:34,808 INFO] {'loss': 0.1947, 'grad_norm': 7.521234035491943, 'learning_rate': 1.7198557310778737e-05, 'epoch': 0.24312220089571338}
+[2025-07-07 16:51:34,842 INFO] step: 380, mrr: 94.64, Acc@1: 89.57
+[2025-07-07 16:51:35,993 INFO] {'loss': 0.1643, 'grad_norm': 18.7154541015625, 'learning_rate': 1.727376404684333e-05, 'epoch': 0.2495201535508637}
+[2025-07-07 16:51:36,027 INFO] step: 390, mrr: 94.72, Acc@1: 89.71
+[2025-07-07 16:51:37,144 INFO] {'loss': 0.1978, 'grad_norm': 10.838286399841309, 'learning_rate': 1.7347066608853085e-05, 'epoch': 0.2559181062060141}
+[2025-07-07 16:51:37,175 INFO] step: 400, mrr: 94.74, Acc@1: 89.76
+[2025-07-07 16:51:38,270 INFO] {'loss': 0.1669, 'grad_norm': 5.502222537994385, 'learning_rate': 1.741855904479824e-05, 'epoch': 0.26231605886116444}
+[2025-07-07 16:51:38,301 INFO] step: 410, mrr: 94.8, Acc@1: 89.87
+[2025-07-07 16:51:39,430 INFO] {'loss': 0.1553, 'grad_norm': 13.044353485107422, 'learning_rate': 1.748832860265267e-05, 'epoch': 0.2687140115163148}
+[2025-07-07 16:51:39,461 INFO] step: 420, mrr: 94.82, Acc@1: 89.9
+[2025-07-07 16:51:40,561 INFO] {'loss': 0.2047, 'grad_norm': 16.502195358276367, 'learning_rate': 1.755645637053058e-05, 'epoch': 0.2751119641714651}
+[2025-07-07 16:51:40,591 INFO] step: 430, mrr: 94.84, Acc@1: 89.95
+[2025-07-07 16:51:41,653 INFO] {'loss': 0.2634, 'grad_norm': 14.514131546020508, 'learning_rate': 1.762301784324125e-05, 'epoch': 0.28150991682661547}
+[2025-07-07 16:51:41,688 INFO] step: 440, mrr: 94.86, Acc@1: 89.99
+[2025-07-07 16:51:42,832 INFO] {'loss': 0.2897, 'grad_norm': 15.383578300476074, 'learning_rate': 1.768808342516896e-05, 'epoch': 0.28790786948176583}
+[2025-07-07 16:51:42,866 INFO] step: 450, mrr: 94.82, Acc@1: 89.93
+[2025-07-07 16:51:44,007 INFO] {'loss': 0.1839, 'grad_norm': 16.95208168029785, 'learning_rate': 1.7751718877877165e-05, 'epoch': 0.2943058221369162}
+[2025-07-07 16:51:44,041 INFO] step: 460, mrr: 94.81, Acc@1: 89.9
+[2025-07-07 16:51:45,130 INFO] {'loss': 0.268, 'grad_norm': 18.667476654052734, 'learning_rate': 1.781398571957145e-05, 'epoch': 0.30070377479206656}
+[2025-07-07 16:51:45,158 INFO] step: 470, mrr: 94.82, Acc@1: 89.9
+[2025-07-07 16:51:46,241 INFO] {'loss': 0.111, 'grad_norm': 7.1906914710998535, 'learning_rate': 1.7874941582503917e-05, 'epoch': 0.30710172744721687}
+[2025-07-07 16:51:46,269 INFO] step: 480, mrr: 94.88, Acc@1: 90.02
+[2025-07-07 16:51:47,380 INFO] {'loss': 0.1952, 'grad_norm': 9.638829231262207, 'learning_rate': 1.7934640533523426e-05, 'epoch': 0.31349968010236723}
+[2025-07-07 16:51:47,412 INFO] step: 490, mrr: 94.93, Acc@1: 90.11
+[2025-07-07 16:51:48,483 INFO] {'loss': 0.1735, 'grad_norm': 12.488972663879395, 'learning_rate': 1.7993133362240127e-05, 'epoch': 0.3198976327575176}
+[2025-07-07 16:51:48,509 INFO] step: 500, mrr: 94.96, Acc@1: 90.18
+[2025-07-07 16:51:49,630 INFO] {'loss': 0.1517, 'grad_norm': 9.357522964477539, 'learning_rate': 1.805046784065291e-05, 'epoch': 0.32629558541266795}
+[2025-07-07 16:51:49,659 INFO] step: 510, mrr: 94.98, Acc@1: 90.22
+[2025-07-07 16:51:50,763 INFO] {'loss': 0.2238, 'grad_norm': 14.911588668823242, 'learning_rate': 1.810668895756533e-05, 'epoch': 0.3326935380678183}
+[2025-07-07 16:51:50,792 INFO] step: 520, mrr: 95.0, Acc@1: 90.26
+[2025-07-07 16:51:51,939 INFO] {'loss': 0.142, 'grad_norm': 16.671358108520508, 'learning_rate': 1.816183913067193e-05, 'epoch': 0.3390914907229686}
+[2025-07-07 16:51:51,962 INFO] step: 530, mrr: 95.02, Acc@1: 90.3
+[2025-07-07 16:51:53,020 INFO] {'loss': 0.1457, 'grad_norm': 2.8385682106018066, 'learning_rate': 1.8215958398819793e-05, 'epoch': 0.345489443378119}
+[2025-07-07 16:51:53,054 INFO] step: 540, mrr: 95.07, Acc@1: 90.4
+[2025-07-07 16:51:54,166 INFO] {'loss': 0.1678, 'grad_norm': 5.945840835571289, 'learning_rate': 1.8269084596628294e-05, 'epoch': 0.35188739603326935}
+[2025-07-07 16:51:54,196 INFO] step: 550, mrr: 95.04, Acc@1: 90.35
+[2025-07-07 16:51:55,317 INFO] {'loss': 0.1839, 'grad_norm': 7.4368205070495605, 'learning_rate': 1.832125351337467e-05, 'epoch': 0.3582853486884197}
+[2025-07-07 16:51:55,353 INFO] step: 560, mrr: 95.06, Acc@1: 90.4
+[2025-07-07 16:51:56,473 INFO] {'loss': 0.1675, 'grad_norm': 11.550496101379395, 'learning_rate': 1.8372499037816614e-05, 'epoch': 0.3646833013435701}
+[2025-07-07 16:51:56,505 INFO] step: 570, mrr: 95.11, Acc@1: 90.48
+[2025-07-07 16:51:57,580 INFO] {'loss': 0.2074, 'grad_norm': 14.944616317749023, 'learning_rate': 1.8422853290419585e-05, 'epoch': 0.3710812539987204}
+[2025-07-07 16:51:57,609 INFO] step: 580, mrr: 95.13, Acc@1: 90.52
+[2025-07-07 16:51:58,721 INFO] {'loss': 0.1042, 'grad_norm': 14.263846397399902, 'learning_rate': 1.847234674428096e-05, 'epoch': 0.37747920665387075}
+[2025-07-07 16:51:58,751 INFO] step: 590, mrr: 95.17, Acc@1: 90.6
+[2025-07-07 16:51:59,842 INFO] {'loss': 0.2298, 'grad_norm': 5.696651935577393, 'learning_rate': 1.852100833589096e-05, 'epoch': 0.3838771593090211}
+[2025-07-07 16:51:59,868 INFO] step: 600, mrr: 95.18, Acc@1: 90.61
+[2025-07-07 16:52:00,945 INFO] {'loss': 0.1917, 'grad_norm': 10.738590240478516, 'learning_rate': 1.856886556673845e-05, 'epoch': 0.3902751119641715}
+[2025-07-07 16:52:00,975 INFO] step: 610, mrr: 95.19, Acc@1: 90.63
+[2025-07-07 16:52:02,104 INFO] {'loss': 0.18, 'grad_norm': 26.533273696899414, 'learning_rate': 1.861594459665503e-05, 'epoch': 0.39667306461932184}
+[2025-07-07 16:52:02,135 INFO] step: 620, mrr: 95.2, Acc@1: 90.64
+[2025-07-07 16:52:03,247 INFO] {'loss': 0.2244, 'grad_norm': 16.26885986328125, 'learning_rate': 1.866227032969055e-05, 'epoch': 0.40307101727447214}
+[2025-07-07 16:52:03,282 INFO] step: 630, mrr: 95.2, Acc@1: 90.64
+[2025-07-07 16:52:04,363 INFO] {'loss': 0.1836, 'grad_norm': 30.349836349487305, 'learning_rate': 1.8707866493225918e-05, 'epoch': 0.4094689699296225}
+[2025-07-07 16:52:04,393 INFO] step: 640, mrr: 95.22, Acc@1: 90.68
+[2025-07-07 16:52:05,538 INFO] {'loss': 0.2201, 'grad_norm': 27.14357566833496, 'learning_rate': 1.8752755710952372e-05, 'epoch': 0.41586692258477287}
+[2025-07-07 16:52:05,567 INFO] step: 650, mrr: 95.22, Acc@1: 90.68
+[2025-07-07 16:52:06,648 INFO] {'loss': 0.123, 'grad_norm': 16.247478485107422, 'learning_rate': 1.879695957027913e-05, 'epoch': 0.42226487523992323}
+[2025-07-07 16:52:06,680 INFO] step: 660, mrr: 95.25, Acc@1: 90.74
+[2025-07-07 16:52:07,765 INFO] {'loss': 0.2157, 'grad_norm': 28.357004165649414, 'learning_rate': 1.8840498684672176e-05, 'epoch': 0.4286628278950736}
+[2025-07-07 16:52:07,791 INFO] step: 670, mrr: 95.26, Acc@1: 90.75
+[2025-07-07 16:52:08,880 INFO] {'loss': 0.1435, 'grad_norm': 12.586716651916504, 'learning_rate': 1.888339275137491e-05, 'epoch': 0.4350607805502239}
+[2025-07-07 16:52:08,914 INFO] step: 680, mrr: 95.28, Acc@1: 90.79
+[2025-07-07 16:52:10,021 INFO] {'loss': 0.2044, 'grad_norm': 19.585126876831055, 'learning_rate': 1.892566060491504e-05, 'epoch': 0.44145873320537427}
+[2025-07-07 16:52:10,055 INFO] step: 690, mrr: 95.29, Acc@1: 90.82
+[2025-07-07 16:52:11,179 INFO] {'loss': 0.1646, 'grad_norm': 18.133544921875, 'learning_rate': 1.8967320266761712e-05, 'epoch': 0.44785668586052463}
+[2025-07-07 16:52:11,207 INFO] step: 700, mrr: 95.31, Acc@1: 90.85
+[2025-07-07 16:52:12,298 INFO] {'loss': 0.2605, 'grad_norm': 24.30908203125, 'learning_rate': 1.9008388991460504e-05, 'epoch': 0.454254638515675}
+[2025-07-07 16:52:12,322 INFO] step: 710, mrr: 95.31, Acc@1: 90.85
+[2025-07-07 16:52:13,374 INFO] {'loss': 0.2317, 'grad_norm': 5.647637844085693, 'learning_rate': 1.9048883309541794e-05, 'epoch': 0.46065259117082535}
+[2025-07-07 16:52:13,400 INFO] step: 720, mrr: 95.32, Acc@1: 90.87
+[2025-07-07 16:52:14,490 INFO] {'loss': 0.2517, 'grad_norm': 10.83434772491455, 'learning_rate': 1.908881906746971e-05, 'epoch': 0.46705054382597566}
+[2025-07-07 16:52:14,520 INFO] step: 730, mrr: 95.32, Acc@1: 90.86
+[2025-07-07 16:52:15,676 INFO] {'loss': 0.2008, 'grad_norm': 26.159669876098633, 'learning_rate': 1.9128211464873177e-05, 'epoch': 0.473448496481126}
+[2025-07-07 16:52:15,711 INFO] step: 740, mrr: 95.32, Acc@1: 90.87
+[2025-07-07 16:52:16,872 INFO] {'loss': 0.1738, 'grad_norm': 1.442221760749817, 'learning_rate': 1.9167075089278e-05, 'epoch': 0.4798464491362764}
+[2025-07-07 16:52:16,906 INFO] step: 750, mrr: 95.35, Acc@1: 90.92
+[2025-07-07 16:52:18,069 INFO] {'loss': 0.2286, 'grad_norm': 5.611855506896973, 'learning_rate': 1.920542394853861e-05, 'epoch': 0.48624440179142675}
+[2025-07-07 16:52:18,100 INFO] step: 760, mrr: 95.35, Acc@1: 90.92
+[2025-07-07 16:52:19,240 INFO] {'loss': 0.1531, 'grad_norm': 4.04149055480957, 'learning_rate': 1.924327150114988e-05, 'epoch': 0.4926423544465771}
+[2025-07-07 16:52:19,274 INFO] step: 770, mrr: 95.38, Acc@1: 90.96
+[2025-07-07 16:52:20,439 INFO] {'loss': 0.1791, 'grad_norm': 11.567811012268066, 'learning_rate': 1.9280630684603204e-05, 'epoch': 0.4990403071017274}
+[2025-07-07 16:52:20,464 INFO] step: 780, mrr: 95.39, Acc@1: 90.98
+[2025-07-07 16:52:21,603 INFO] {'loss': 0.1222, 'grad_norm': 16.269241333007812, 'learning_rate': 1.931751394193628e-05, 'epoch': 0.5054382597568778}
+[2025-07-07 16:52:21,637 INFO] step: 790, mrr: 95.41, Acc@1: 91.02
+[2025-07-07 16:52:22,715 INFO] {'loss': 0.0824, 'grad_norm': 9.726593971252441, 'learning_rate': 1.935393324661296e-05, 'epoch': 0.5118362124120281}
+[2025-07-07 16:52:22,749 INFO] step: 800, mrr: 95.44, Acc@1: 91.09
+[2025-07-07 16:52:23,899 INFO] {'loss': 0.2083, 'grad_norm': 18.47919273376465, 'learning_rate': 1.9389900125857667e-05, 'epoch': 0.5182341650671785}
+[2025-07-07 16:52:23,925 INFO] step: 810, mrr: 95.44, Acc@1: 91.09
+[2025-07-07 16:52:25,017 INFO] {'loss': 0.2231, 'grad_norm': 21.386459350585938, 'learning_rate': 1.9425425682558113e-05, 'epoch': 0.5246321177223289}
+[2025-07-07 16:52:25,044 INFO] step: 820, mrr: 95.45, Acc@1: 91.1
+[2025-07-07 16:52:26,125 INFO] {'loss': 0.2534, 'grad_norm': 17.913652420043945, 'learning_rate': 1.9460520615840494e-05, 'epoch': 0.5310300703774792}
+[2025-07-07 16:52:26,158 INFO] step: 830, mrr: 95.44, Acc@1: 91.09
+[2025-07-07 16:52:27,266 INFO] {'loss': 0.1899, 'grad_norm': 1.0122536420822144, 'learning_rate': 1.9495195240412547e-05, 'epoch': 0.5374280230326296}
+[2025-07-07 16:52:27,293 INFO] step: 840, mrr: 95.46, Acc@1: 91.12
+[2025-07-07 16:52:28,394 INFO] {'loss': 0.1525, 'grad_norm': 7.383693218231201, 'learning_rate': 1.9529459504761957e-05, 'epoch': 0.5438259756877799}
+[2025-07-07 16:52:28,425 INFO] step: 850, mrr: 95.48, Acc@1: 91.15
+[2025-07-07 16:52:29,493 INFO] {'loss': 0.2594, 'grad_norm': 14.64803695678711, 'learning_rate': 1.9563323008290453e-05, 'epoch': 0.5502239283429302}
+[2025-07-07 16:52:29,525 INFO] step: 860, mrr: 95.47, Acc@1: 91.14
+[2025-07-07 16:52:30,600 INFO] {'loss': 0.1741, 'grad_norm': 21.665000915527344, 'learning_rate': 1.959679501745746e-05, 'epoch': 0.5566218809980806}
+[2025-07-07 16:52:30,631 INFO] step: 870, mrr: 95.48, Acc@1: 91.17
+[2025-07-07 16:52:31,749 INFO] {'loss': 0.1848, 'grad_norm': 13.21004581451416, 'learning_rate': 1.9629884481001123e-05, 'epoch': 0.5630198336532309}
+[2025-07-07 16:52:31,776 INFO] step: 880, mrr: 95.48, Acc@1: 91.16
+[2025-07-07 16:52:32,900 INFO] {'loss': 0.1952, 'grad_norm': 23.822072982788086, 'learning_rate': 1.966260004429942e-05, 'epoch': 0.5694177863083814}
+[2025-07-07 16:52:32,928 INFO] step: 890, mrr: 95.47, Acc@1: 91.14
+[2025-07-07 16:52:34,038 INFO] {'loss': 0.1796, 'grad_norm': 18.25637435913086, 'learning_rate': 1.9694950062928836e-05, 'epoch': 0.5758157389635317}
+[2025-07-07 16:52:34,070 INFO] step: 900, mrr: 95.48, Acc@1: 91.16
+[2025-07-07 16:52:35,189 INFO] {'loss': 0.2274, 'grad_norm': 16.395971298217773, 'learning_rate': 1.9726942615473957e-05, 'epoch': 0.582213691618682}
+[2025-07-07 16:52:35,215 INFO] step: 910, mrr: 95.48, Acc@1: 91.17
+[2025-07-07 16:52:36,340 INFO] {'loss': 0.1805, 'grad_norm': 11.79452896118164, 'learning_rate': 1.975858551563704e-05, 'epoch': 0.5886116442738324}
+[2025-07-07 16:52:36,374 INFO] step: 920, mrr: 95.49, Acc@1: 91.19
+[2025-07-07 16:52:37,534 INFO] {'loss': 0.1886, 'grad_norm': 9.65447998046875, 'learning_rate': 1.9789886323692902e-05, 'epoch': 0.5950095969289827}
+[2025-07-07 16:52:37,563 INFO] step: 930, mrr: 95.5, Acc@1: 91.2
+[2025-07-07 16:52:38,630 INFO] {'loss': 0.277, 'grad_norm': 3.3622796535491943, 'learning_rate': 1.982085235733133e-05, 'epoch': 0.6014075495841331}
+[2025-07-07 16:52:38,664 INFO] step: 940, mrr: 95.49, Acc@1: 91.17
+[2025-07-07 16:52:39,698 INFO] {'loss': 0.2411, 'grad_norm': 2.825026035308838, 'learning_rate': 1.9851490701925657e-05, 'epoch': 0.6078055022392834}
+[2025-07-07 16:52:39,732 INFO] step: 950, mrr: 95.49, Acc@1: 91.17
+[2025-07-07 16:52:40,824 INFO] {'loss': 0.1586, 'grad_norm': 8.172359466552734, 'learning_rate': 1.988180822026379e-05, 'epoch': 0.6142034548944337}
+[2025-07-07 16:52:40,854 INFO] step: 960, mrr: 95.5, Acc@1: 91.2
+[2025-07-07 16:52:41,973 INFO] {'loss': 0.1947, 'grad_norm': 8.530984878540039, 'learning_rate': 1.991181156177497e-05, 'epoch': 0.6206014075495841}
+[2025-07-07 16:52:42,003 INFO] step: 970, mrr: 95.49, Acc@1: 91.19
+[2025-07-07 16:52:43,126 INFO] {'loss': 0.1995, 'grad_norm': 12.56038761138916, 'learning_rate': 1.99415071712833e-05, 'epoch': 0.6269993602047345}
+[2025-07-07 16:52:43,153 INFO] step: 980, mrr: 95.51, Acc@1: 91.22
+[2025-07-07 16:52:44,273 INFO] {'loss': 0.1771, 'grad_norm': 11.896193504333496, 'learning_rate': 1.9970901297317003e-05, 'epoch': 0.6333973128598849}
+[2025-07-07 16:52:44,304 INFO] step: 990, mrr: 95.52, Acc@1: 91.24
+[2025-07-07 16:52:45,432 INFO] {'loss': 0.1557, 'grad_norm': 10.51875114440918, 'learning_rate': 2e-05, 'epoch': 0.6397952655150352}
+[2025-07-07 16:52:45,460 INFO] step: 1000, mrr: 95.53, Acc@1: 91.25
+[2025-07-07 16:52:46,589 INFO] {'loss': 0.1386, 'grad_norm': 4.301155090332031, 'learning_rate': 1.9680284191829488e-05, 'epoch': 0.6461932181701855}
+[2025-07-07 16:52:46,622 INFO] step: 1010, mrr: 95.55, Acc@1: 91.3
+[2025-07-07 16:52:47,727 INFO] {'loss': 0.225, 'grad_norm': 11.770621299743652, 'learning_rate': 1.932504440497336e-05, 'epoch': 0.6525911708253359}
+[2025-07-07 16:52:47,759 INFO] step: 1020, mrr: 95.55, Acc@1: 91.3
+[2025-07-07 16:52:48,880 INFO] {'loss': 0.0901, 'grad_norm': 6.837001800537109, 'learning_rate': 1.896980461811723e-05, 'epoch': 0.6589891234804862}
+[2025-07-07 16:52:48,913 INFO] step: 1030, mrr: 95.57, Acc@1: 91.34
+[2025-07-07 16:52:50,004 INFO] {'loss': 0.092, 'grad_norm': 3.8969428539276123, 'learning_rate': 1.8614564831261103e-05, 'epoch': 0.6653870761356366}
+[2025-07-07 16:52:50,038 INFO] step: 1040, mrr: 95.59, Acc@1: 91.38
+[2025-07-07 16:52:51,147 INFO] {'loss': 0.1405, 'grad_norm': 8.233806610107422, 'learning_rate': 1.8259325044404975e-05, 'epoch': 0.6717850287907869}
+[2025-07-07 16:52:51,175 INFO] step: 1050, mrr: 95.61, Acc@1: 91.42
+[2025-07-07 16:52:52,225 INFO] {'loss': 0.1525, 'grad_norm': 6.691184997558594, 'learning_rate': 1.7904085257548847e-05, 'epoch': 0.6781829814459372}
+[2025-07-07 16:52:52,255 INFO] step: 1060, mrr: 95.63, Acc@1: 91.46
+[2025-07-07 16:52:53,393 INFO] {'loss': 0.1746, 'grad_norm': 9.356083869934082, 'learning_rate': 1.754884547069272e-05, 'epoch': 0.6845809341010877}
+[2025-07-07 16:52:53,421 INFO] step: 1070, mrr: 95.64, Acc@1: 91.49
+[2025-07-07 16:52:54,424 INFO] {'loss': 0.1933, 'grad_norm': 16.609804153442383, 'learning_rate': 1.719360568383659e-05, 'epoch': 0.690978886756238}
+[2025-07-07 16:52:54,457 INFO] step: 1080, mrr: 95.64, Acc@1: 91.49
+[2025-07-07 16:52:55,571 INFO] {'loss': 0.2611, 'grad_norm': 1.5485410690307617, 'learning_rate': 1.6838365896980463e-05, 'epoch': 0.6973768394113884}
+[2025-07-07 16:52:55,605 INFO] step: 1090, mrr: 95.63, Acc@1: 91.47
+[2025-07-07 16:52:56,699 INFO] {'loss': 0.1614, 'grad_norm': 1.96843421459198, 'learning_rate': 1.6483126110124335e-05, 'epoch': 0.7037747920665387}
+[2025-07-07 16:52:56,729 INFO] step: 1100, mrr: 95.65, Acc@1: 91.5
+[2025-07-07 16:52:57,862 INFO] {'loss': 0.234, 'grad_norm': 12.151501655578613, 'learning_rate': 1.6127886323268207e-05, 'epoch': 0.710172744721689}
+[2025-07-07 16:52:57,891 INFO] step: 1110, mrr: 95.65, Acc@1: 91.51
+[2025-07-07 16:52:58,995 INFO] {'loss': 0.2988, 'grad_norm': 17.226564407348633, 'learning_rate': 1.577264653641208e-05, 'epoch': 0.7165706973768394}
+[2025-07-07 16:52:59,029 INFO] step: 1120, mrr: 95.65, Acc@1: 91.49
+[2025-07-07 16:53:00,122 INFO] {'loss': 0.2421, 'grad_norm': 15.78657341003418, 'learning_rate': 1.541740674955595e-05, 'epoch': 0.7229686500319897}
+[2025-07-07 16:53:00,153 INFO] step: 1130, mrr: 95.64, Acc@1: 91.48
+[2025-07-07 16:53:01,208 INFO] {'loss': 0.2406, 'grad_norm': 18.977705001831055, 'learning_rate': 1.5062166962699824e-05, 'epoch': 0.7293666026871402}
+[2025-07-07 16:53:01,236 INFO] step: 1140, mrr: 95.65, Acc@1: 91.49
+[2025-07-07 16:53:02,386 INFO] {'loss': 0.1378, 'grad_norm': 3.159991979598999, 'learning_rate': 1.4706927175843695e-05, 'epoch': 0.7357645553422905}
+[2025-07-07 16:53:02,419 INFO] step: 1150, mrr: 95.66, Acc@1: 91.51
+[2025-07-07 16:53:03,531 INFO] {'loss': 0.2146, 'grad_norm': 3.321120262145996, 'learning_rate': 1.4351687388987568e-05, 'epoch': 0.7421625079974408}
+[2025-07-07 16:53:03,562 INFO] step: 1160, mrr: 95.67, Acc@1: 91.54
+[2025-07-07 16:53:04,671 INFO] {'loss': 0.177, 'grad_norm': 4.825720310211182, 'learning_rate': 1.399644760213144e-05, 'epoch': 0.7485604606525912}
+[2025-07-07 16:53:04,699 INFO] step: 1170, mrr: 95.69, Acc@1: 91.56
+[2025-07-07 16:53:05,763 INFO] {'loss': 0.1339, 'grad_norm': 5.188693523406982, 'learning_rate': 1.3641207815275312e-05, 'epoch': 0.7549584133077415}
+[2025-07-07 16:53:05,797 INFO] step: 1180, mrr: 95.69, Acc@1: 91.58
+[2025-07-07 16:53:06,873 INFO] {'loss': 0.2831, 'grad_norm': 9.367323875427246, 'learning_rate': 1.3285968028419186e-05, 'epoch': 0.7613563659628919}
+[2025-07-07 16:53:06,901 INFO] step: 1190, mrr: 95.69, Acc@1: 91.57
+[2025-07-07 16:53:07,944 INFO] {'loss': 0.1662, 'grad_norm': 0.5264788866043091, 'learning_rate': 1.2930728241563056e-05, 'epoch': 0.7677543186180422}
+[2025-07-07 16:53:07,973 INFO] step: 1200, mrr: 95.7, Acc@1: 91.61
+[2025-07-07 16:53:09,103 INFO] {'loss': 0.1778, 'grad_norm': 1.6546642780303955, 'learning_rate': 1.2575488454706928e-05, 'epoch': 0.7741522712731925}
+[2025-07-07 16:53:09,137 INFO] step: 1210, mrr: 95.71, Acc@1: 91.63
+[2025-07-07 16:53:10,221 INFO] {'loss': 0.1387, 'grad_norm': 2.3932974338531494, 'learning_rate': 1.22202486678508e-05, 'epoch': 0.780550223928343}
+[2025-07-07 16:53:10,247 INFO] step: 1220, mrr: 95.72, Acc@1: 91.65
+[2025-07-07 16:53:11,362 INFO] {'loss': 0.099, 'grad_norm': 1.5166023969650269, 'learning_rate': 1.1865008880994673e-05, 'epoch': 0.7869481765834933}
+[2025-07-07 16:53:11,393 INFO] step: 1230, mrr: 95.74, Acc@1: 91.67
+[2025-07-07 16:53:12,477 INFO] {'loss': 0.1941, 'grad_norm': 25.610254287719727, 'learning_rate': 1.1509769094138545e-05, 'epoch': 0.7933461292386437}
+[2025-07-07 16:53:12,511 INFO] step: 1240, mrr: 95.75, Acc@1: 91.7
+[2025-07-07 16:53:13,618 INFO] {'loss': 0.0881, 'grad_norm': 0.05901378393173218, 'learning_rate': 1.1154529307282415e-05, 'epoch': 0.799744081893794}
+[2025-07-07 16:53:13,646 INFO] step: 1250, mrr: 95.77, Acc@1: 91.74
+[2025-07-07 16:53:14,725 INFO] {'loss': 0.1779, 'grad_norm': 14.58959674835205, 'learning_rate': 1.0799289520426289e-05, 'epoch': 0.8061420345489443}
+[2025-07-07 16:53:14,751 INFO] step: 1260, mrr: 95.77, Acc@1: 91.74
+[2025-07-07 16:53:15,845 INFO] {'loss': 0.3913, 'grad_norm': 21.6322078704834, 'learning_rate': 1.0444049733570161e-05, 'epoch': 0.8125399872040947}
+[2025-07-07 16:53:15,873 INFO] step: 1270, mrr: 95.76, Acc@1: 91.72
+[2025-07-07 16:53:17,048 INFO] {'loss': 0.1234, 'grad_norm': 4.140684127807617, 'learning_rate': 1.0088809946714033e-05, 'epoch': 0.818937939859245}
+[2025-07-07 16:53:17,073 INFO] step: 1280, mrr: 95.77, Acc@1: 91.73
+[2025-07-07 16:53:18,189 INFO] {'loss': 0.2438, 'grad_norm': 15.9799165725708, 'learning_rate': 9.733570159857905e-06, 'epoch': 0.8253358925143954}
+[2025-07-07 16:53:18,218 INFO] step: 1290, mrr: 95.77, Acc@1: 91.73
+[2025-07-07 16:53:19,351 INFO] {'loss': 0.1521, 'grad_norm': 17.837230682373047, 'learning_rate': 9.378330373001777e-06, 'epoch': 0.8317338451695457}
+[2025-07-07 16:53:19,378 INFO] step: 1300, mrr: 95.76, Acc@1: 91.7
+[2025-07-07 16:53:20,466 INFO] {'loss': 0.1496, 'grad_norm': 19.366289138793945, 'learning_rate': 9.023090586145649e-06, 'epoch': 0.838131797824696}
+[2025-07-07 16:53:20,496 INFO] step: 1310, mrr: 95.77, Acc@1: 91.73
+[2025-07-07 16:53:21,576 INFO] {'loss': 0.1844, 'grad_norm': 11.741645812988281, 'learning_rate': 8.66785079928952e-06, 'epoch': 0.8445297504798465}
+[2025-07-07 16:53:21,610 INFO] step: 1320, mrr: 95.78, Acc@1: 91.74
+[2025-07-07 16:53:22,686 INFO] {'loss': 0.1416, 'grad_norm': 4.404954433441162, 'learning_rate': 8.312611012433394e-06, 'epoch': 0.8509277031349968}
+[2025-07-07 16:53:22,720 INFO] step: 1330, mrr: 95.79, Acc@1: 91.75
+[2025-07-07 16:53:23,862 INFO] {'loss': 0.2201, 'grad_norm': 3.3796768188476562, 'learning_rate': 7.957371225577264e-06, 'epoch': 0.8573256557901472}
+[2025-07-07 16:53:23,888 INFO] step: 1340, mrr: 95.79, Acc@1: 91.76
+[2025-07-07 16:53:25,008 INFO] {'loss': 0.199, 'grad_norm': 6.338332653045654, 'learning_rate': 7.602131438721138e-06, 'epoch': 0.8637236084452975}
+[2025-07-07 16:53:25,042 INFO] step: 1350, mrr: 95.79, Acc@1: 91.77
+[2025-07-07 16:53:26,197 INFO] {'loss': 0.0876, 'grad_norm': 7.0753912925720215, 'learning_rate': 7.246891651865009e-06, 'epoch': 0.8701215611004478}
+[2025-07-07 16:53:26,231 INFO] step: 1360, mrr: 95.81, Acc@1: 91.81
+[2025-07-07 16:53:27,359 INFO] {'loss': 0.2082, 'grad_norm': 28.488557815551758, 'learning_rate': 6.891651865008882e-06, 'epoch': 0.8765195137555982}
+[2025-07-07 16:53:27,390 INFO] step: 1370, mrr: 95.82, Acc@1: 91.81
+[2025-07-07 16:53:28,496 INFO] {'loss': 0.2025, 'grad_norm': 3.317534923553467, 'learning_rate': 6.536412078152754e-06, 'epoch': 0.8829174664107485}
+[2025-07-07 16:53:28,527 INFO] step: 1380, mrr: 95.82, Acc@1: 91.82
+[2025-07-07 16:53:29,657 INFO] {'loss': 0.1823, 'grad_norm': 14.930051803588867, 'learning_rate': 6.181172291296626e-06, 'epoch': 0.889315419065899}
+[2025-07-07 16:53:29,690 INFO] step: 1390, mrr: 95.82, Acc@1: 91.81
+[2025-07-07 16:53:30,873 INFO] {'loss': 0.1823, 'grad_norm': 10.827749252319336, 'learning_rate': 5.825932504440498e-06, 'epoch': 0.8957133717210493}
+[2025-07-07 16:53:30,907 INFO] step: 1400, mrr: 95.82, Acc@1: 91.81
+[2025-07-07 16:53:32,083 INFO] {'loss': 0.2402, 'grad_norm': 13.499781608581543, 'learning_rate': 5.4706927175843694e-06, 'epoch': 0.9021113243761996}
+[2025-07-07 16:53:32,117 INFO] step: 1410, mrr: 95.82, Acc@1: 91.81
+[2025-07-07 16:53:33,253 INFO] {'loss': 0.1758, 'grad_norm': 3.2013065814971924, 'learning_rate': 5.115452930728242e-06, 'epoch': 0.90850927703135}
+[2025-07-07 16:53:33,284 INFO] step: 1420, mrr: 95.83, Acc@1: 91.84
+[2025-07-07 16:53:34,404 INFO] {'loss': 0.0867, 'grad_norm': 15.290853500366211, 'learning_rate': 4.760213143872114e-06, 'epoch': 0.9149072296865003}
+[2025-07-07 16:53:34,434 INFO] step: 1430, mrr: 95.84, Acc@1: 91.86
+[2025-07-07 16:53:35,593 INFO] {'loss': 0.1111, 'grad_norm': 9.801905632019043, 'learning_rate': 4.404973357015986e-06, 'epoch': 0.9213051823416507}
+[2025-07-07 16:53:35,626 INFO] step: 1440, mrr: 95.85, Acc@1: 91.87
+[2025-07-07 16:53:36,762 INFO] {'loss': 0.15, 'grad_norm': 24.2956485748291, 'learning_rate': 4.049733570159858e-06, 'epoch': 0.927703134996801}
+[2025-07-07 16:53:36,789 INFO] step: 1450, mrr: 95.85, Acc@1: 91.87
+[2025-07-07 16:53:37,937 INFO] {'loss': 0.2762, 'grad_norm': 17.514053344726562, 'learning_rate': 3.6944937833037303e-06, 'epoch': 0.9341010876519513}
+[2025-07-07 16:53:37,971 INFO] step: 1460, mrr: 95.85, Acc@1: 91.87
+[2025-07-07 16:53:39,087 INFO] {'loss': 0.1396, 'grad_norm': 9.549420356750488, 'learning_rate': 3.339253996447602e-06, 'epoch': 0.9404990403071017}
+[2025-07-07 16:53:39,115 INFO] step: 1470, mrr: 95.86, Acc@1: 91.9
+[2025-07-07 16:53:40,264 INFO] {'loss': 0.2793, 'grad_norm': 7.920143127441406, 'learning_rate': 2.984014209591474e-06, 'epoch': 0.946896992962252}
+[2025-07-07 16:53:40,287 INFO] step: 1480, mrr: 95.85, Acc@1: 91.87
+[2025-07-07 16:53:41,396 INFO] {'loss': 0.1896, 'grad_norm': 15.631558418273926, 'learning_rate': 2.628774422735347e-06, 'epoch': 0.9532949456174025}
+[2025-07-07 16:53:41,421 INFO] step: 1490, mrr: 95.85, Acc@1: 91.88
+[2025-07-07 16:53:42,458 INFO] {'loss': 0.2459, 'grad_norm': 13.796676635742188, 'learning_rate': 2.273534635879219e-06, 'epoch': 0.9596928982725528}
+[2025-07-07 16:53:42,492 INFO] step: 1500, mrr: 95.85, Acc@1: 91.87
+[2025-07-07 16:53:43,587 INFO] {'loss': 0.2809, 'grad_norm': 23.449979782104492, 'learning_rate': 1.9182948490230907e-06, 'epoch': 0.9660908509277031}
+[2025-07-07 16:53:43,618 INFO] step: 1510, mrr: 95.86, Acc@1: 91.88
+[2025-07-07 16:53:44,727 INFO] {'loss': 0.0887, 'grad_norm': 6.931779861450195, 'learning_rate': 1.563055062166963e-06, 'epoch': 0.9724888035828535}
+[2025-07-07 16:53:44,761 INFO] step: 1520, mrr: 95.87, Acc@1: 91.9
+[2025-07-07 16:53:45,882 INFO] {'loss': 0.2303, 'grad_norm': 22.55611228942871, 'learning_rate': 1.207815275310835e-06, 'epoch': 0.9788867562380038}
+[2025-07-07 16:53:45,916 INFO] step: 1530, mrr: 95.86, Acc@1: 91.88
+[2025-07-07 16:53:47,018 INFO] {'loss': 0.2113, 'grad_norm': 16.502248764038086, 'learning_rate': 8.52575488454707e-07, 'epoch': 0.9852847088931542}
+[2025-07-07 16:53:47,052 INFO] step: 1540, mrr: 95.87, Acc@1: 91.9
+[2025-07-07 16:53:48,202 INFO] {'loss': 0.1634, 'grad_norm': 15.559881210327148, 'learning_rate': 4.97335701598579e-07, 'epoch': 0.9916826615483045}
+[2025-07-07 16:53:48,232 INFO] step: 1550, mrr: 95.88, Acc@1: 91.92
+[2025-07-07 16:53:49,339 INFO] {'loss': 0.0861, 'grad_norm': 10.888811111450195, 'learning_rate': 1.4209591474245118e-07, 'epoch': 0.9980806142034548}
+[2025-07-07 16:53:49,373 INFO] step: 1560, mrr: 95.89, Acc@1: 91.94
