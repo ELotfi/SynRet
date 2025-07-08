@@ -13,20 +13,21 @@ fi
 mkdir -p "${OUTPUT_DIR}"
 
 PROC_PER_NODE=$(nvidia-smi --list-gpus | wc -l)
+#--train_file synret_50k.jsonl \
 #CUDA_VISIBLE_DEVICES=0
 # python -u -m torch.distributed.launch --nproc_per_node ${PROC_PER_NODE} src/train_biencoder.py \
 deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
-    --model_name_or_path intfloat/multilingual-e5-base \
-    --per_device_train_batch_size 32 \
-    --per_device_eval_batch_size 64 \
+    --model_name_or_path intfloat/multilingual-e5-large \
+    --per_device_train_batch_size 64 \
+    --per_device_eval_batch_size 128 \
     --add_pooler False \
     --t 0.02 \
     --seed 1234 \
     --do_train \
     --fp16 \
-    --train_file synret_50k.jsonl \
-    --q_max_len 50 \
-    --p_max_len 450 \
+    --train_file syn_ret_nl.jsonl \
+    --q_max_len 500 \
+    --p_max_len 500 \
     --train_n_passages 2 \
 	--use_in_batch_negs False \
 	--full_contrastive_loss False \
