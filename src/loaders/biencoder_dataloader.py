@@ -151,7 +151,8 @@ class SyntRetDataLoader:
         return merged_dict
 
     def _get_transformed_datasets(self) -> Tuple:
-        raw_dataset = load_dataset('json', data_files=self.args.train_file)['train']
+        #raw_dataset = load_dataset('json', data_files=self.args.train_file)['train']
+        raw_dataset = load_dataset('Ehsanl/SynRet', data_files=self.args.train_file)['train']
         if self.args.max_train_samples is not None:
             raw_dataset = raw_dataset.select(range(self.args.max_train_samples))
 	    # Log a few random samples from the training set:

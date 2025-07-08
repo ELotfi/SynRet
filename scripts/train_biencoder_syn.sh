@@ -17,14 +17,14 @@ PROC_PER_NODE=$(nvidia-smi --list-gpus | wc -l)
 # python -u -m torch.distributed.launch --nproc_per_node ${PROC_PER_NODE} src/train_biencoder.py \
 deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --model_name_or_path intfloat/multilingual-e5-base \
-    --per_device_train_batch_size 16 \
-    --per_device_eval_batch_size 32 \
+    --per_device_train_batch_size 32 \
+    --per_device_eval_batch_size 64 \
     --add_pooler False \
     --t 0.02 \
     --seed 1234 \
     --do_train \
     --fp16 \
-    --train_file ../data/synret_50k.jsonl \
+    --train_file synret_50k.jsonl \
     --q_max_len 50 \
     --p_max_len 450 \
     --train_n_passages 2 \
@@ -38,7 +38,6 @@ deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --share_encoder True \
     --logging_steps 50 \
     --output_dir "${OUTPUT_DIR}" \
-	--data_dir ../data \
     --save_total_limit 2 \
     --save_strategy epoch \
     --eval_strategy epoch \
