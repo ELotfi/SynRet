@@ -28,6 +28,9 @@ deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --train_file syn_ret_nl.jsonl \
     --q_max_len 500 \
     --p_max_len 500 \
+    --add_prompts True \
+    --q_prompt "query: " \
+    --p_prompt "passage: " \
     --train_n_passages 2 \
 	--use_in_batch_negs False \
 	--full_contrastive_loss False \
