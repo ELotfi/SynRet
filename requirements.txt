@@ -4,4 +4,4 @@ pytrec_eval
 deepspeed==0.14.5
 pyserini
 flash-attn==2.8.0.post2
-qwen_vl_utils
+wandb

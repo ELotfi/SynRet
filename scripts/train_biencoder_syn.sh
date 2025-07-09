@@ -14,12 +14,13 @@ mkdir -p "${OUTPUT_DIR}"
 
 PROC_PER_NODE=$(nvidia-smi --list-gpus | wc -l)
 #--train_file synret_50k.jsonl \
+#--output_dir "${OUTPUT_DIR}" \
 #CUDA_VISIBLE_DEVICES=0
 # python -u -m torch.distributed.launch --nproc_per_node ${PROC_PER_NODE} src/train_biencoder.py \
 deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
-    --model_name_or_path intfloat/multilingual-e5-large \
-    --per_device_train_batch_size 64 \
-    --per_device_eval_batch_size 128 \
+    --model_name_or_path intfloat/multilingual-e5-base \
+    --per_device_train_batch_size 256 \
+    --per_device_eval_batch_size 256 \
     --add_pooler False \
     --t 0.02 \
     --seed 1234 \
@@ -32,20 +33,24 @@ deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --q_prompt "query: " \
     --p_prompt "passage: " \
     --train_n_passages 2 \
-	--use_in_batch_negs False \
-	--full_contrastive_loss False \
+    --use_in_batch_negs False \
+    --full_contrastive_loss False \
     --dataloader_num_workers 1 \
     --num_train_epochs 1 \
-    --learning_rate 2e-5 \
+    --learning_rate 1e-5 \
     --use_scaled_loss True \
-    --warmup_steps 1000 \
+    --warmup_steps 200 \
     --share_encoder True \
     --logging_steps 50 \
-    --output_dir "${OUTPUT_DIR}" \
-    --save_total_limit 2 \
-    --save_strategy epoch \
-    --eval_strategy epoch \
+    --save_total_limit 5 \
+    --save_strategy steps \
+    --save_steps 0.2 \
+    --push_to_hub True \
+    --hub_model_id Ehsanl/RetNLbase-v2 \
+    --hub_token \
+    --eval_strategy steps \
+    --eval_steps 0.2 \
     --remove_unused_columns False \
     --overwrite_output_dir \
     --disable_tqdm True \
-    --report_to none "$@"
+    --report_to wandb
