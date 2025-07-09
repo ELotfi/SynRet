@@ -56,6 +56,10 @@ class Arguments(TrainingArguments):
         default=768,
         metadata={"help": "output dimension for pooler"}
     )
+    add_prompts: bool = field(default=False)
+    q_prompt: str = field(default="query: ")
+    p_prompt: str = field(default="passage: ")
+    train_tasks: str = field(default="all")
     t: float = field(default=0.05, metadata={"help": "temperature of biencoder training"})
     l2_normalize: bool = field(default=True, metadata={"help": "L2 normalize embeddings or not"})
     t_warmup: bool = field(default=False, metadata={"help": "warmup temperature"})
