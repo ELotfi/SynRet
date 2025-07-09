@@ -158,15 +158,14 @@ class SyntRetDataLoader:
         if self.args.max_train_samples is not None:
             raw_dataset = raw_dataset.select(range(self.args.max_train_samples))
         
-        propmts = {'q':self.args.q_prompt, 'p':self.args.p_prompt}
+        propmts = {'q': 'query: ', 'p':'passage: '}
         def _add_prompts(sample):
             sample['q'] = propmts['q'] + sample['q']
             sample['pos'] = propmts['p'] + sample['pos']
             sample['neg'] = propmts['p'] + sample['neg']
             return sample
         
-        if self.args.add_prompts:
-            raw_dataset = raw_dataset.map(_add_prompts)
+        raw_dataset = raw_dataset.map(_add_prompts)
 	    # Log a few random samples from the training set:
         for index in random.sample(range(len(raw_dataset)), 3):
             logger.info(f"Sample {index} of the training set: {raw_dataset[index]}.")

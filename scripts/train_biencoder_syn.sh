@@ -10,17 +10,21 @@ if [ -z "$OUTPUT_DIR" ]; then
   OUTPUT_DIR="${DIR}/checkpoint/biencoder_syn_$(date +%F-%H%M.%S)"
 fi
 
-mkdir -p "${OUTPUT_DIR}"
+#mkdir -p "${OUTPUT_DIR}"
 
 PROC_PER_NODE=$(nvidia-smi --list-gpus | wc -l)
 #--train_file synret_50k.jsonl \
 #--output_dir "${OUTPUT_DIR}" \
 #CUDA_VISIBLE_DEVICES=0
+# --add_prompts True \
+# --q_prompt "query: " \
+# --p_prompt "passage: " \
 # python -u -m torch.distributed.launch --nproc_per_node ${PROC_PER_NODE} src/train_biencoder.py \
 deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --model_name_or_path intfloat/multilingual-e5-base \
-    --per_device_train_batch_size 256 \
+    --per_device_train_batch_size 128 \
     --per_device_eval_batch_size 256 \
+	--gradient_accumulation_steps 2 \
     --add_pooler False \
     --t 0.02 \
     --seed 1234 \
@@ -29,9 +33,6 @@ deepspeed ../src/train_biencoder.py --deepspeed ../ds_config.json \
     --train_file syn_ret_nl.jsonl \
     --q_max_len 500 \
     --p_max_len 500 \
-    --add_prompts True \
-    --q_prompt "query: " \
-    --p_prompt "passage: " \
     --train_n_passages 2 \
     --use_in_batch_negs False \
     --full_contrastive_loss False \

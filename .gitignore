@@ -1,2 +1,4 @@
 checkpoint/
 data/
+scripts/wandb
+scripts/trainer_output
