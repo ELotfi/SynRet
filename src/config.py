@@ -168,7 +168,7 @@ class Arguments(TrainingArguments):
     )
 
     def __post_init__(self):
-        assert os.path.exists(self.data_dir)
+#        assert os.path.exists(self.data_dir)
         assert torch.cuda.is_available(), 'Only support running on GPUs'
         assert self.task_type in ['ir', 'qa']
 

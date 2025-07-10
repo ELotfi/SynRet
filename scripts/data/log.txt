@@ -3705,3 +3705,502 @@ weight_decay=0.0,
 [2025-07-07 16:53:48,232 INFO] step: 1550, mrr: 95.88, Acc@1: 91.92
 [2025-07-07 16:53:49,339 INFO] {'loss': 0.0861, 'grad_norm': 10.888811111450195, 'learning_rate': 1.4209591474245118e-07, 'epoch': 0.9980806142034548}
 [2025-07-07 16:53:49,373 INFO] step: 1560, mrr: 95.89, Acc@1: 91.94
+[2025-07-10 12:08:29,362 INFO] gcc -pthread -B /venv/main/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /venv/main/include -fPIC -O2 -isystem /venv/main/include -fPIC -c /tmp/tmp_6ob75tn/test.c -o /tmp/tmp_6ob75tn/test.o
+[2025-07-10 12:08:29,377 INFO] gcc -pthread -B /venv/main/compiler_compat /tmp/tmp_6ob75tn/test.o -laio -o /tmp/tmp_6ob75tn/a.out
+[2025-07-10 12:08:30,057 INFO] Args=Arguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+add_pooler=False,
+add_prompts=True,
+all_use_mask_token=<ALL_USE_MASK_TOKEN>,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_dir=None,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=4,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=../ds_config.json,
+disable_tqdm=True,
+do_encode=False,
+do_eval=True,
+do_kd_biencoder=False,
+do_kd_gen_score=False,
+do_predict=False,
+do_rerank=False,
+do_search=False,
+do_train=True,
+dry_run=False,
+encode_batch_size=256,
+encode_in_path=None,
+encode_save_dir=None,
+encode_shard_size=2000000,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=0.25,
+eval_strategy=IntervalStrategy.STEPS,
+eval_use_gather_object=False,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_contrastive_loss=False,
+full_determinism=False,
+gradient_accumulation_steps=2,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=Ehsanl/RetNLbase_sl,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+kd_cont_loss_weight=1.0,
+kd_gen_score_batch_size=128,
+kd_gen_score_n_neg=30,
+kd_gen_score_split=dev,
+kd_mask_hn=True,
+l2_normalize=True,
+label_names=['labels'],
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=trainer_output/runs/Jul10_12-08-29_baa23c0806ef,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=IntervalStrategy.STEPS,
+loss_scale=-1.0,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+max_train_samples=None,
+metric_for_best_model=None,
+model_name_or_path=intfloat/multilingual-e5-base,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+out_dimension=768,
+output_dir=trainer_output,
+overwrite_output_dir=True,
+p_max_len=500,
+p_prompt=passage: ,
+past_index=-1,
+per_device_eval_batch_size=256,
+per_device_train_batch_size=128,
+prediction_loss_only=False,
+push_to_hub=True,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+q_max_len=50,
+q_prompt=query: ,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=['wandb'],
+rerank_batch_size=128,
+rerank_depth=1000,
+rerank_forward_factor=1,
+rerank_in_path=,
+rerank_max_length=256,
+rerank_out_path=,
+rerank_split=dev,
+rerank_use_rdrop=False,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+rlm_decoder_layers=2,
+rlm_decoder_mask_prob=0.5,
+rlm_encoder_mask_prob=0.3,
+rlm_freeze_generator=True,
+rlm_generator_mlm_weight=0.2,
+rlm_generator_model_name=google/electra-base-generator,
+rlm_max_length=144,
+rlm_num_eval_samples=4096,
+run_name=trainer_output,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=0.25,
+save_strategy=SaveStrategy.STEPS,
+save_total_limit=4,
+search_batch_size=128,
+search_out_dir=,
+search_split=dev,
+search_topk=200,
+seed=1234,
+share_encoder=True,
+skip_memory_metrics=True,
+t=0.02,
+t_warmup=False,
+task_type=ir,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_file=syn_ret_nl.jsonl,
+train_n_passages=2,
+train_tasks=sl,
+use_cpu=False,
+use_first_positive=False,
+use_in_batch_negs=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_scaled_loss=True,
+validation_file=None,
+warmup_ratio=0.0,
+warmup_steps=200,
+weight_decay=0.0,
+)
+[2025-07-10 12:08:39,469 INFO] BiencoderModel(
+  (lm_q): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (lm_p): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): XLMRobertaPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (cross_entropy): CrossEntropyLoss()
+  (kl_loss_fn): KLDivLoss()
+  (pooler): Identity()
+)
+[2025-07-10 12:08:39,550 INFO] Vocab size: 250002
+[2025-07-10 12:09:10,825 INFO] Sample 115535 of the training set: {'task_type': 'sl', 'task_desc': 'Given a question, retrieve documents that can help to answer the question.', 'q': 'query: Wat zijn de emotionele en psychologische gevolgen voor nabestaanden na het verlies van een dierbare door een onverwacht overlijden?', 'pos': "passage: Het verlies van een geliefde door een plotseling overlijden, zoals een onverwacht verkeersongeval of een hartaanval, brengt een scala aan intense emoties met zich mee. Nabestaanden ervaren vaak rouw, shock, ontkenning en boosheid. De psychologische gevolgen kunnen langdurig zijn, wat zich uit in depressieve gevoelens, sentimenten van schuld of zelfbeschuldiging, en problemen met het verwerken van het verlies. Rouwprocessen variëren van persoon tot persoon, maar het is algemeen erkend dat het verliezen van een dierbare door een onvoorziene gebeurtenis diepe emotionele impact heeft die vaak professionele ondersteuning vereist voor een gezonde verwerking. Daarnaast kunnen sociale relaties onder druk komen te staan doordat de nabestaanden zich terugtrekken of geconfronteerd worden met anderen die moeite hebben om hun gevoelens te begrijpen. Het is essentieel dat zij toegang hebben tot passende psychologische hulp en ondersteuningsgroepen om de rouw op een gezonde wijze te doorstaan en het verlies een plek te geven in hun leven.\n\nHet opbouwen van een nieuw levensritme na zo'n ingrijpende gebeurtenis kost tijd en geduld. In veel gevallen worden rouwende geconfronteerd met fysieke symptomen zoals slaapstoornissen, vermoeidheid en concentratieproblemen. Psychologisch gezien kunnen ze te maken krijgen met herhaalde herinneringen aan het moment van overlijden of traumatische gedachten, wat hun dagelijks functioneren aanzienlijk kan beïnvloeden. Het erkennen van de pijn en het zoeken van sociale steun vormen kritieke elementen in het verwerkingsproces. Daarnaast wordt steeds meer benadrukt dat het bespreekbaar maken van deze gevoelens en het uiten van emoties via therapie of steunende gesprekken bijdraagt aan een beter herstel. In de context van rouwverwerking speelt het accepteren van het verlies een centrale rol, wat vaak een intensief en langdurig proces is, maar uiteindelijk leidt tot een nieuw evenwicht in het leven van de nabestaanden.", 'neg': "passage: Elk jaar overlijden veel mensen in Nederland door weersinvloeden, en de overheid neemt maatregelen om de gevolgen te beperken. Wat veel mensen niet weten, is dat de infrastructuur rondom natuurrampen goed is ontwikkeld en dat noodhulp snel ter plekke kan zijn. Daarnaast worden er preventieve campagnes gevoerd om de bevolking bewust te maken van de gevaren en om levens te redden. Het is belangrijk dat burgers weten hoe ze zichzelf kunnen beschermen tijdens noodsituaties zoals overstromingen of stormen, en dat de lokale veiligheidsdiensten goed voorbereid zijn op verschillende scenario's. Door deze geïntegreerde aanpak wordt de impact van natuurrampen verminderd en worden slachtoffers sneller geholpen, waardoor slachtoffers van dergelijke gebeurtenissen vaak sneller kunnen herstellen dan bij onverwachte persoonlijke tragedies.", 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-10 12:09:10,825 INFO] Sample 30631 of the training set: {'task_type': 'sl', 'task_desc': 'Given a question, retrieve documents that can help to answer the question.', 'q': 'query: Hoe wordt het weer aanstaande woensdag verwacht in Nederland?', 'pos': 'passage: Het weer in Nederland wordt de komende dagen gekenmerkt door wisselende omstandigheden. Over het algemeen wordt er een mix van bewolkte luchten en opklaringen verwacht, met temperaturen die variëren tussen 12 en 18 graden Celsius. In de ochtend kunnen lokale mistbanken voorkomen, vooral in de laaglanden, maar deze zullen snel verdwijnen zodra de zon opkomt. Er is geen significante neerslag voorzien, waardoor het ideale weer oplevert voor buitenactiviteiten zoals wandelen of fietsen. Wat betreft wind, wordt er een lichte wind waargenomen uit het noordwesten, die geen grote invloed heeft op de comfort niveaus. De weersvoorspellingen voor woensdag wijzen op een relatief stabiel patroon, waarbij de kans op neerslag minimaal is. Dit maakt dat de dag geschikt is voor diverse buitenplannen zonder dat men zich grote zorgen hoeft te maken over de weersomstandigheden. De temperatuur kan gedurende de dag verder oplopen wanneer de zon doorbreekt, waardoor het een aangename dag wordt voor inwoners en toeristen. Over het algemeen biedt de weersituatie in Nederland een rustige en milde week, ideaal voor zowel werk- als recreatieve activiteiten. Het is altijd verstandig om de lokale weersvoorspelling kort voor vertrek te raadplegen voor de meest actuele informatie, aangezien het weer in Nederland snel kan veranderen.', 'neg': 'passage: De klimatologische veranderingen in Nederland hebben geleid tot een toename in de frequentie en intensiteit van stormen en hevige regenbuien. In de afgelopen decennia is er een duidelijke trend zichtbaar van hogere temperaturen en meer extreme weersomstandigheden. Deze ontwikkelingen hebben grote gevolgen voor de waterbeheerplannen en infrastructuur, waaronder de versterking van dijken en de verbetering van drainage systemen. De wetenschappelijke communities werken nauw samen om nauwkeurigere voorspellingen te doen en adaptieve strategieën te ontwikkelen die de impact van klimaatverandering kunnen beperken. Behalve de fysieke veranderingen in het klimaat, spelen ook ecosystemen en biodiversiteit een belangrijke rol bij het weer en de resilience van natuurlijke systemen. Mogelijke oplossingen omvatten het vergroten van groene infrastructuren, zoals stadsparken en groene daken, die helpen om de temperatuur te reguleren en wateroverlast te verminderen. Daarnaast wordt er veel onderzoek gedaan naar het aanpassingsvermogen van landbouwsystemen en stedelijke gebieden. Het is cruciaal dat beleidsmakers, gemeenschappen en wetenschappers blijven samenwerken om de gevolgen van klimaatverandering te mitigeren en Nederland voor te bereiden op de toekomst.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-10 12:09:10,826 INFO] Sample 1963 of the training set: {'task_type': 'sl', 'task_desc': 'Given a claim, retrieve documents that support or refute it.', 'q': 'query: Waar ligt de Veluwe precies?', 'pos': 'passage: De Veluwe is een groot natuurgebied in het midden van Nederland, gelegen in de provincie Gelderland en deels in de provincie Utrecht. Het staat bekend om zijn uitgestrekte bossen, heidevelden en zandverstuivingen. De Veluwe beslaat ongeveer 1.000 vierkante kilometer en is een populaire bestemming voor wandelaars, fietsers en natuurliefhebbers. Belangrijke plaatsen rondom de Veluwe zijn Apeldoorn, Ede en Harderwijk. Door de variatie in landschappen is het gebied rijk aan diverse flora en fauna, waaronder wilde zwijnen, edelherten en vele vogelsoorten. Verschillende nationale parken, zoals Nationaal Park De Hoge Veluwe, maken deel uit van dit gebied.', 'neg': 'passage: Gelderland is een provincie in het oosten van Nederland met een gevarieerd landschap, variërend van rivieren tot heuvelachtige gebieden. De hoofdstad van Gelderland is Arnhem, bekend om zijn geschiedenis en cultuur. Het gebied is populair voor recreatie en bestaat uit meerdere natuurgebieden naast de Veluwe, zoals de Betuwe en de Achterhoek. Sommige delen van Gelderland worden gekenmerkt door landbouwgrond en kleine dorpen. Hoewel de provincie bekendstaat om haar natuurschoon, zijn er ook stedelijke gebieden met diverse economische activiteiten. De Veluwe is een onderdeel van Gelderland, maar het beslaat slechts een deel van dit grote gebied.', 'scores': {'pos': 1.0, 'neg': 0.0}}.
+[2025-07-10 12:09:11,838 WARNING] Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 2. Using DeepSpeed's value.
+[2025-07-10 12:10:17,932 INFO] {'loss': 0.363, 'grad_norm': 4.457652568817139, 'learning_rate': 4.345879896760937e-06, 'epoch': 0.01466275659824047}
+[2025-07-10 12:10:18,146 INFO] step: 10, mrr: 92.39, Acc@1: 85.57
+[2025-07-10 12:10:18,782 INFO] step: 10, mrr: 92.52, Acc@1: 85.8
+[2025-07-10 12:10:30,992 INFO] {'loss': 0.2407, 'grad_norm': 2.819648265838623, 'learning_rate': 5.6541201032390644e-06, 'epoch': 0.02932551319648094}
+[2025-07-10 12:10:31,208 INFO] step: 20, mrr: 94.12, Acc@1: 88.87
+[2025-07-10 12:10:31,847 INFO] step: 20, mrr: 94.18, Acc@1: 88.97
+[2025-07-10 12:10:44,074 INFO] {'loss': 0.1732, 'grad_norm': 2.5398693084716797, 'learning_rate': 6.419391565964472e-06, 'epoch': 0.04398826979472141}
+[2025-07-10 12:10:44,291 INFO] step: 30, mrr: 95.05, Acc@1: 90.6
+[2025-07-10 12:10:44,930 INFO] step: 30, mrr: 95.09, Acc@1: 90.68
+[2025-07-10 12:10:57,168 INFO] {'loss': 0.1147, 'grad_norm': 2.656114101409912, 'learning_rate': 6.9623603097171925e-06, 'epoch': 0.05865102639296188}
+[2025-07-10 12:10:57,384 INFO] step: 40, mrr: 95.82, Acc@1: 92.08
+[2025-07-10 12:10:58,024 INFO] step: 40, mrr: 95.85, Acc@1: 92.14
+[2025-07-10 12:11:10,256 INFO] {'loss': 0.0829, 'grad_norm': 3.396737813949585, 'learning_rate': 7.3835195870437456e-06, 'epoch': 0.07331378299120235}
+[2025-07-10 12:11:10,473 INFO] step: 50, mrr: 96.4, Acc@1: 93.16
+[2025-07-10 12:11:11,111 INFO] step: 50, mrr: 96.42, Acc@1: 93.21
+[2025-07-10 12:11:23,338 INFO] {'loss': 0.0626, 'grad_norm': 1.8529777526855469, 'learning_rate': 7.7276317724426e-06, 'epoch': 0.08797653958944282}
+[2025-07-10 12:11:23,555 INFO] step: 60, mrr: 96.82, Acc@1: 93.96
+[2025-07-10 12:11:24,194 INFO] step: 60, mrr: 96.84, Acc@1: 93.99
+[2025-07-10 12:11:36,442 INFO] {'loss': 0.0525, 'grad_norm': 2.0901644229888916, 'learning_rate': 8.018574479650967e-06, 'epoch': 0.10263929618768329}
+[2025-07-10 12:11:36,659 INFO] step: 70, mrr: 97.16, Acc@1: 94.6
+[2025-07-10 12:11:37,296 INFO] step: 70, mrr: 97.18, Acc@1: 94.63
+[2025-07-10 12:11:49,532 INFO] {'loss': 0.0366, 'grad_norm': 2.181779623031616, 'learning_rate': 8.270600516195319e-06, 'epoch': 0.11730205278592376}
+[2025-07-10 12:11:49,749 INFO] step: 80, mrr: 97.45, Acc@1: 95.14
+[2025-07-10 12:11:50,388 INFO] step: 80, mrr: 97.46, Acc@1: 95.16
+[2025-07-10 12:12:02,617 INFO] {'loss': 0.0277, 'grad_norm': 1.8935929536819458, 'learning_rate': 8.492903235168008e-06, 'epoch': 0.13196480938416422}
+[2025-07-10 12:12:02,834 INFO] step: 90, mrr: 97.69, Acc@1: 95.61
+[2025-07-10 12:12:03,472 INFO] step: 90, mrr: 97.7, Acc@1: 95.63
+[2025-07-10 12:12:15,704 INFO] {'loss': 0.0321, 'grad_norm': 1.399030327796936, 'learning_rate': 8.691759793521874e-06, 'epoch': 0.1466275659824047}
+[2025-07-10 12:12:15,921 INFO] step: 100, mrr: 97.87, Acc@1: 95.95
+[2025-07-10 12:12:16,559 INFO] step: 100, mrr: 97.88, Acc@1: 95.96
+[2025-07-10 12:12:28,780 INFO] {'loss': 0.0312, 'grad_norm': 2.791447162628174, 'learning_rate': 8.87164743182396e-06, 'epoch': 0.16129032258064516}
+[2025-07-10 12:12:28,997 INFO] step: 110, mrr: 98.02, Acc@1: 96.22
+[2025-07-10 12:12:29,635 INFO] step: 110, mrr: 98.02, Acc@1: 96.24
+[2025-07-10 12:12:41,832 INFO] {'loss': 0.0199, 'grad_norm': 1.3265197277069092, 'learning_rate': 9.035871978920727e-06, 'epoch': 0.17595307917888564}
+[2025-07-10 12:12:42,049 INFO] step: 120, mrr: 98.16, Acc@1: 96.5
+[2025-07-10 12:12:42,688 INFO] step: 120, mrr: 98.16, Acc@1: 96.51
+[2025-07-10 12:12:54,914 INFO] {'loss': 0.0251, 'grad_norm': 1.1537936925888062, 'learning_rate': 9.186943917681705e-06, 'epoch': 0.1906158357771261}
+[2025-07-10 12:12:55,130 INFO] step: 130, mrr: 98.27, Acc@1: 96.71
+[2025-07-10 12:12:55,769 INFO] step: 130, mrr: 98.28, Acc@1: 96.72
+[2025-07-10 12:13:07,988 INFO] {'loss': 0.0252, 'grad_norm': 1.5751093626022339, 'learning_rate': 9.326814686129093e-06, 'epoch': 0.20527859237536658}
+[2025-07-10 12:13:08,205 INFO] step: 140, mrr: 98.37, Acc@1: 96.9
+[2025-07-10 12:13:08,843 INFO] step: 140, mrr: 98.38, Acc@1: 96.91
+[2025-07-10 12:13:21,072 INFO] {'loss': 0.018, 'grad_norm': 1.397944450378418, 'learning_rate': 9.457031256247281e-06, 'epoch': 0.21994134897360704}
+[2025-07-10 12:13:21,289 INFO] step: 150, mrr: 98.46, Acc@1: 97.06
+[2025-07-10 12:13:21,928 INFO] step: 150, mrr: 98.46, Acc@1: 97.07
+[2025-07-10 12:13:34,146 INFO] {'loss': 0.0174, 'grad_norm': 1.8713263273239136, 'learning_rate': 9.578840722673449e-06, 'epoch': 0.23460410557184752}
+[2025-07-10 12:13:34,362 INFO] step: 160, mrr: 98.54, Acc@1: 97.21
+[2025-07-10 12:13:35,000 INFO] step: 160, mrr: 98.54, Acc@1: 97.22
+[2025-07-10 12:13:47,228 INFO] {'loss': 0.0134, 'grad_norm': 3.00508451461792, 'learning_rate': 9.693263128169957e-06, 'epoch': 0.24926686217008798}
+[2025-07-10 12:13:47,445 INFO] step: 170, mrr: 98.61, Acc@1: 97.35
+[2025-07-10 12:13:48,083 INFO] step: 170, mrr: 98.62, Acc@1: 97.36
+[2025-07-10 12:14:24,056 INFO] {'eval_loss': 0.0149688720703125, 'eval_mrr': 99.76599884033203, 'eval_acc1': 99.5320053100586, 'eval_runtime': 35.5177, 'eval_samples_per_second': 703.874, 'eval_steps_per_second': 2.759, 'epoch': 0.250733137829912}
+[2025-07-10 12:14:24,697 INFO] Saving model checkpoint to trainer_output/checkpoint-171
+[2025-07-10 12:14:41,026 INFO] {'loss': 0.0184, 'grad_norm': 2.280578374862671, 'learning_rate': 9.801143441646136e-06, 'epoch': 0.26392961876832843}
+[2025-07-10 12:14:41,242 INFO] step: 180, mrr: 98.67, Acc@1: 97.47
+[2025-07-10 12:14:41,880 INFO] step: 180, mrr: 98.67, Acc@1: 97.47
+[2025-07-10 12:14:54,103 INFO] {'loss': 0.019, 'grad_norm': 1.4560539722442627, 'learning_rate': 9.903189464052494e-06, 'epoch': 0.2785923753665689}
+[2025-07-10 12:14:54,320 INFO] step: 190, mrr: 98.72, Acc@1: 97.57
+[2025-07-10 12:14:54,957 INFO] step: 190, mrr: 98.73, Acc@1: 97.57
+[2025-07-10 12:15:07,154 INFO] {'loss': 0.015, 'grad_norm': 1.6423228979110718, 'learning_rate': 1e-05, 'epoch': 0.2932551319648094}
+[2025-07-10 12:15:07,370 INFO] step: 200, mrr: 98.78, Acc@1: 97.66
+[2025-07-10 12:15:08,008 INFO] step: 200, mrr: 98.78, Acc@1: 97.67
+[2025-07-10 12:15:20,227 INFO] {'loss': 0.0181, 'grad_norm': 1.7825208902359009, 'learning_rate': 9.813278008298756e-06, 'epoch': 0.30791788856304986}
+[2025-07-10 12:15:20,444 INFO] step: 210, mrr: 98.82, Acc@1: 97.74
+[2025-07-10 12:15:21,082 INFO] step: 210, mrr: 98.82, Acc@1: 97.75
+[2025-07-10 12:15:33,306 INFO] {'loss': 0.0136, 'grad_norm': 2.3156094551086426, 'learning_rate': 9.605809128630706e-06, 'epoch': 0.3225806451612903}
+[2025-07-10 12:15:33,523 INFO] step: 220, mrr: 98.86, Acc@1: 97.82
+[2025-07-10 12:15:34,157 INFO] step: 220, mrr: 98.86, Acc@1: 97.83
+[2025-07-10 12:15:46,379 INFO] {'loss': 0.0256, 'grad_norm': 1.3807034492492676, 'learning_rate': 9.398340248962657e-06, 'epoch': 0.33724340175953077}
+[2025-07-10 12:15:46,596 INFO] step: 230, mrr: 98.9, Acc@1: 97.9
+[2025-07-10 12:15:47,234 INFO] step: 230, mrr: 98.9, Acc@1: 97.9
+[2025-07-10 12:15:59,414 INFO] {'loss': 0.015, 'grad_norm': 1.5920015573501587, 'learning_rate': 9.190871369294606e-06, 'epoch': 0.3519061583577713}
+[2025-07-10 12:15:59,631 INFO] step: 240, mrr: 98.93, Acc@1: 97.96
+[2025-07-10 12:16:00,269 INFO] step: 240, mrr: 98.94, Acc@1: 97.97
+[2025-07-10 12:16:12,460 INFO] {'loss': 0.02, 'grad_norm': 1.0597959756851196, 'learning_rate': 8.983402489626556e-06, 'epoch': 0.36656891495601174}
+[2025-07-10 12:16:12,676 INFO] step: 250, mrr: 98.97, Acc@1: 98.02
+[2025-07-10 12:16:13,314 INFO] step: 250, mrr: 98.97, Acc@1: 98.02
+[2025-07-10 12:16:25,537 INFO] {'loss': 0.0128, 'grad_norm': 1.8561984300613403, 'learning_rate': 8.775933609958507e-06, 'epoch': 0.3812316715542522}
+[2025-07-10 12:16:25,754 INFO] step: 260, mrr: 99.0, Acc@1: 98.09
+[2025-07-10 12:16:26,392 INFO] step: 260, mrr: 99.0, Acc@1: 98.09
+[2025-07-10 12:16:38,607 INFO] {'loss': 0.0127, 'grad_norm': 1.4424992799758911, 'learning_rate': 8.568464730290456e-06, 'epoch': 0.39589442815249265}
+[2025-07-10 12:16:38,824 INFO] step: 270, mrr: 99.03, Acc@1: 98.14
+[2025-07-10 12:16:39,461 INFO] step: 270, mrr: 99.03, Acc@1: 98.14
+[2025-07-10 12:16:51,680 INFO] {'loss': 0.0162, 'grad_norm': 1.0608152151107788, 'learning_rate': 8.360995850622408e-06, 'epoch': 0.41055718475073316}
+[2025-07-10 12:16:51,897 INFO] step: 280, mrr: 99.05, Acc@1: 98.18
+[2025-07-10 12:16:52,535 INFO] step: 280, mrr: 99.05, Acc@1: 98.19
+[2025-07-10 12:17:04,755 INFO] {'loss': 0.0205, 'grad_norm': 1.0031647682189941, 'learning_rate': 8.153526970954357e-06, 'epoch': 0.4252199413489736}
+[2025-07-10 12:17:04,972 INFO] step: 290, mrr: 99.07, Acc@1: 98.22
+[2025-07-10 12:17:05,610 INFO] step: 290, mrr: 99.07, Acc@1: 98.22
+[2025-07-10 12:17:17,814 INFO] {'loss': 0.0151, 'grad_norm': 0.9890545606613159, 'learning_rate': 7.946058091286308e-06, 'epoch': 0.4398826979472141}
+[2025-07-10 12:17:18,030 INFO] step: 300, mrr: 99.09, Acc@1: 98.27
+[2025-07-10 12:17:18,668 INFO] step: 300, mrr: 99.1, Acc@1: 98.27
+[2025-07-10 12:17:30,889 INFO] {'loss': 0.0195, 'grad_norm': 1.1821155548095703, 'learning_rate': 7.738589211618259e-06, 'epoch': 0.45454545454545453}
+[2025-07-10 12:17:31,106 INFO] step: 310, mrr: 99.11, Acc@1: 98.3
+[2025-07-10 12:17:31,744 INFO] step: 310, mrr: 99.11, Acc@1: 98.3
+[2025-07-10 12:17:43,955 INFO] {'loss': 0.0106, 'grad_norm': 0.2908116281032562, 'learning_rate': 7.531120331950208e-06, 'epoch': 0.46920821114369504}
+[2025-07-10 12:17:44,172 INFO] step: 320, mrr: 99.14, Acc@1: 98.35
+[2025-07-10 12:17:44,809 INFO] step: 320, mrr: 99.14, Acc@1: 98.35
+[2025-07-10 12:17:57,019 INFO] {'loss': 0.0102, 'grad_norm': 0.46281859278678894, 'learning_rate': 7.323651452282158e-06, 'epoch': 0.4838709677419355}
+[2025-07-10 12:17:57,229 INFO] step: 330, mrr: 99.16, Acc@1: 98.39
+[2025-07-10 12:17:57,860 INFO] step: 330, mrr: 99.16, Acc@1: 98.39
+[2025-07-10 12:18:10,077 INFO] {'loss': 0.0104, 'grad_norm': 1.5589029788970947, 'learning_rate': 7.116182572614109e-06, 'epoch': 0.49853372434017595}
+[2025-07-10 12:18:10,293 INFO] step: 340, mrr: 99.18, Acc@1: 98.43
+[2025-07-10 12:18:10,931 INFO] step: 340, mrr: 99.18, Acc@1: 98.43
+[2025-07-10 12:18:48,257 INFO] {'eval_loss': 0.0111541748046875, 'eval_mrr': 99.82599639892578, 'eval_acc1': 99.65200805664062, 'eval_runtime': 35.5621, 'eval_samples_per_second': 702.995, 'eval_steps_per_second': 2.756, 'epoch': 0.501466275659824}
+[2025-07-10 12:18:48,779 INFO] Saving model checkpoint to trainer_output/checkpoint-342
+[2025-07-10 12:19:03,978 INFO] {'loss': 0.0125, 'grad_norm': 3.1940810680389404, 'learning_rate': 6.9087136929460584e-06, 'epoch': 0.5131964809384164}
+[2025-07-10 12:19:04,195 INFO] step: 350, mrr: 99.2, Acc@1: 98.46
+[2025-07-10 12:19:04,832 INFO] step: 350, mrr: 99.2, Acc@1: 98.46
+[2025-07-10 12:19:17,039 INFO] {'loss': 0.0144, 'grad_norm': 0.6890366077423096, 'learning_rate': 6.701244813278008e-06, 'epoch': 0.5278592375366569}
+[2025-07-10 12:19:17,255 INFO] step: 360, mrr: 99.21, Acc@1: 98.49
+[2025-07-10 12:19:17,892 INFO] step: 360, mrr: 99.21, Acc@1: 98.49
+[2025-07-10 12:19:30,099 INFO] {'loss': 0.0126, 'grad_norm': 2.2104101181030273, 'learning_rate': 6.49377593360996e-06, 'epoch': 0.5425219941348973}
+[2025-07-10 12:19:30,315 INFO] step: 370, mrr: 99.23, Acc@1: 98.52
+[2025-07-10 12:19:30,952 INFO] step: 370, mrr: 99.23, Acc@1: 98.52
+[2025-07-10 12:19:43,164 INFO] {'loss': 0.01, 'grad_norm': 0.13752619922161102, 'learning_rate': 6.2863070539419094e-06, 'epoch': 0.5571847507331378}
+[2025-07-10 12:19:43,381 INFO] step: 380, mrr: 99.25, Acc@1: 98.55
+[2025-07-10 12:19:44,018 INFO] step: 380, mrr: 99.25, Acc@1: 98.56
+[2025-07-10 12:19:56,222 INFO] {'loss': 0.0148, 'grad_norm': 2.3461391925811768, 'learning_rate': 6.078838174273859e-06, 'epoch': 0.5718475073313783}
+[2025-07-10 12:19:56,438 INFO] step: 390, mrr: 99.26, Acc@1: 98.58
+[2025-07-10 12:19:57,069 INFO] step: 390, mrr: 99.26, Acc@1: 98.58
+[2025-07-10 12:20:09,268 INFO] {'loss': 0.0086, 'grad_norm': 1.1968291997909546, 'learning_rate': 5.87136929460581e-06, 'epoch': 0.5865102639296188}
+[2025-07-10 12:20:09,484 INFO] step: 400, mrr: 99.27, Acc@1: 98.61
+[2025-07-10 12:20:10,121 INFO] step: 400, mrr: 99.27, Acc@1: 98.61
+[2025-07-10 12:20:22,321 INFO] {'loss': 0.0116, 'grad_norm': 0.9763684868812561, 'learning_rate': 5.66390041493776e-06, 'epoch': 0.6011730205278593}
+[2025-07-10 12:20:22,537 INFO] step: 410, mrr: 99.29, Acc@1: 98.63
+[2025-07-10 12:20:23,174 INFO] step: 410, mrr: 99.29, Acc@1: 98.63
+[2025-07-10 12:20:35,367 INFO] {'loss': 0.0098, 'grad_norm': 1.0943297147750854, 'learning_rate': 5.456431535269709e-06, 'epoch': 0.6158357771260997}
+[2025-07-10 12:20:35,582 INFO] step: 420, mrr: 99.3, Acc@1: 98.66
+[2025-07-10 12:20:36,220 INFO] step: 420, mrr: 99.3, Acc@1: 98.66
+[2025-07-10 12:20:48,447 INFO] {'loss': 0.0112, 'grad_norm': 2.682663917541504, 'learning_rate': 5.24896265560166e-06, 'epoch': 0.6304985337243402}
+[2025-07-10 12:20:48,664 INFO] step: 430, mrr: 99.31, Acc@1: 98.69
+[2025-07-10 12:20:49,302 INFO] step: 430, mrr: 99.32, Acc@1: 98.69
+[2025-07-10 12:21:01,532 INFO] {'loss': 0.0123, 'grad_norm': 0.5684580206871033, 'learning_rate': 5.041493775933611e-06, 'epoch': 0.6451612903225806}
+[2025-07-10 12:21:01,748 INFO] step: 440, mrr: 99.32, Acc@1: 98.7
+[2025-07-10 12:21:02,386 INFO] step: 440, mrr: 99.33, Acc@1: 98.71
+[2025-07-10 12:21:14,601 INFO] {'loss': 0.0106, 'grad_norm': 0.7512679696083069, 'learning_rate': 4.83402489626556e-06, 'epoch': 0.6598240469208211}
+[2025-07-10 12:21:14,817 INFO] step: 450, mrr: 99.33, Acc@1: 98.72
+[2025-07-10 12:21:15,454 INFO] step: 450, mrr: 99.33, Acc@1: 98.72
+[2025-07-10 12:21:27,688 INFO] {'loss': 0.0142, 'grad_norm': 1.9873898029327393, 'learning_rate': 4.626556016597511e-06, 'epoch': 0.6744868035190615}
+[2025-07-10 12:21:27,904 INFO] step: 460, mrr: 99.34, Acc@1: 98.74
+[2025-07-10 12:21:28,542 INFO] step: 460, mrr: 99.35, Acc@1: 98.74
+[2025-07-10 12:21:40,777 INFO] {'loss': 0.0145, 'grad_norm': 2.0032401084899902, 'learning_rate': 4.419087136929461e-06, 'epoch': 0.6891495601173021}
+[2025-07-10 12:21:40,993 INFO] step: 470, mrr: 99.35, Acc@1: 98.76
+[2025-07-10 12:21:41,631 INFO] step: 470, mrr: 99.35, Acc@1: 98.76
+[2025-07-10 12:21:53,852 INFO] {'loss': 0.0089, 'grad_norm': 1.3466904163360596, 'learning_rate': 4.211618257261411e-06, 'epoch': 0.7038123167155426}
+[2025-07-10 12:21:54,068 INFO] step: 480, mrr: 99.36, Acc@1: 98.78
+[2025-07-10 12:21:54,706 INFO] step: 480, mrr: 99.36, Acc@1: 98.78
+[2025-07-10 12:22:06,934 INFO] {'loss': 0.0103, 'grad_norm': 2.052752733230591, 'learning_rate': 4.004149377593361e-06, 'epoch': 0.718475073313783}
+[2025-07-10 12:22:07,150 INFO] step: 490, mrr: 99.37, Acc@1: 98.8
+[2025-07-10 12:22:07,788 INFO] step: 490, mrr: 99.37, Acc@1: 98.8
+[2025-07-10 12:22:20,018 INFO] {'loss': 0.008, 'grad_norm': 0.7489900588989258, 'learning_rate': 3.7966804979253114e-06, 'epoch': 0.7331378299120235}
+[2025-07-10 12:22:20,234 INFO] step: 500, mrr: 99.38, Acc@1: 98.82
+[2025-07-10 12:22:20,872 INFO] step: 500, mrr: 99.38, Acc@1: 98.82
+[2025-07-10 12:22:33,106 INFO] {'loss': 0.0105, 'grad_norm': 0.3516148030757904, 'learning_rate': 3.5892116182572616e-06, 'epoch': 0.7478005865102639}
+[2025-07-10 12:22:33,323 INFO] step: 510, mrr: 99.39, Acc@1: 98.83
+[2025-07-10 12:22:33,958 INFO] step: 510, mrr: 99.39, Acc@1: 98.83
+[2025-07-10 12:23:12,576 INFO] {'eval_loss': 0.00981903076171875, 'eval_mrr': 99.8479995727539, 'eval_acc1': 99.69600677490234, 'eval_runtime': 35.5507, 'eval_samples_per_second': 703.221, 'eval_steps_per_second': 2.757, 'epoch': 0.7521994134897361}
+[2025-07-10 12:23:13,109 INFO] Saving model checkpoint to trainer_output/checkpoint-513
+[2025-07-10 12:23:26,932 INFO] {'loss': 0.0122, 'grad_norm': 1.5468149185180664, 'learning_rate': 3.381742738589212e-06, 'epoch': 0.7624633431085044}
+[2025-07-10 12:23:27,148 INFO] step: 520, mrr: 99.4, Acc@1: 98.85
+[2025-07-10 12:23:27,786 INFO] step: 520, mrr: 99.4, Acc@1: 98.85
+[2025-07-10 12:23:39,996 INFO] {'loss': 0.0125, 'grad_norm': 2.38387131690979, 'learning_rate': 3.174273858921162e-06, 'epoch': 0.7771260997067448}
+[2025-07-10 12:23:40,212 INFO] step: 530, mrr: 99.41, Acc@1: 98.86
+[2025-07-10 12:23:40,849 INFO] step: 530, mrr: 99.41, Acc@1: 98.86
+[2025-07-10 12:23:53,075 INFO] {'loss': 0.0115, 'grad_norm': 0.33783435821533203, 'learning_rate': 2.966804979253112e-06, 'epoch': 0.7917888563049853}
+[2025-07-10 12:23:53,291 INFO] step: 540, mrr: 99.42, Acc@1: 98.88
+[2025-07-10 12:23:53,928 INFO] step: 540, mrr: 99.42, Acc@1: 98.88
+[2025-07-10 12:24:06,131 INFO] {'loss': 0.0084, 'grad_norm': 1.1909300088882446, 'learning_rate': 2.7593360995850628e-06, 'epoch': 0.8064516129032258}
+[2025-07-10 12:24:06,347 INFO] step: 550, mrr: 99.42, Acc@1: 98.89
+[2025-07-10 12:24:06,984 INFO] step: 550, mrr: 99.42, Acc@1: 98.89
+[2025-07-10 12:24:19,187 INFO] {'loss': 0.009, 'grad_norm': 1.7507719993591309, 'learning_rate': 2.5518672199170125e-06, 'epoch': 0.8211143695014663}
+[2025-07-10 12:24:19,403 INFO] step: 560, mrr: 99.43, Acc@1: 98.91
+[2025-07-10 12:24:20,040 INFO] step: 560, mrr: 99.43, Acc@1: 98.91
+[2025-07-10 12:24:32,233 INFO] {'loss': 0.0044, 'grad_norm': 1.077887773513794, 'learning_rate': 2.3443983402489627e-06, 'epoch': 0.8357771260997068}
+[2025-07-10 12:24:32,449 INFO] step: 570, mrr: 99.44, Acc@1: 98.92
+[2025-07-10 12:24:33,085 INFO] step: 570, mrr: 99.44, Acc@1: 98.92
+[2025-07-10 12:24:45,277 INFO] {'loss': 0.0078, 'grad_norm': 0.7550936341285706, 'learning_rate': 2.136929460580913e-06, 'epoch': 0.8504398826979472}
+[2025-07-10 12:24:45,492 INFO] step: 580, mrr: 99.45, Acc@1: 98.94
+[2025-07-10 12:24:46,129 INFO] step: 580, mrr: 99.45, Acc@1: 98.94
+[2025-07-10 12:24:58,319 INFO] {'loss': 0.0089, 'grad_norm': 1.298823595046997, 'learning_rate': 1.929460580912863e-06, 'epoch': 0.8651026392961877}
+[2025-07-10 12:24:58,534 INFO] step: 590, mrr: 99.46, Acc@1: 98.95
+[2025-07-10 12:24:59,171 INFO] step: 590, mrr: 99.46, Acc@1: 98.95
+[2025-07-10 12:25:11,368 INFO] {'loss': 0.0121, 'grad_norm': 0.5326959490776062, 'learning_rate': 1.7219917012448133e-06, 'epoch': 0.8797653958944281}
+[2025-07-10 12:25:11,584 INFO] step: 600, mrr: 99.46, Acc@1: 98.97
+[2025-07-10 12:25:12,221 INFO] step: 600, mrr: 99.46, Acc@1: 98.97
+[2025-07-10 12:25:24,420 INFO] {'loss': 0.0146, 'grad_norm': 0.4671313166618347, 'learning_rate': 1.5145228215767635e-06, 'epoch': 0.8944281524926686}
+[2025-07-10 12:25:24,635 INFO] step: 610, mrr: 99.47, Acc@1: 98.97
+[2025-07-10 12:25:25,271 INFO] step: 610, mrr: 99.47, Acc@1: 98.97
+[2025-07-10 12:25:37,467 INFO] {'loss': 0.0131, 'grad_norm': 1.9670019149780273, 'learning_rate': 1.307053941908714e-06, 'epoch': 0.9090909090909091}
+[2025-07-10 12:25:37,683 INFO] step: 620, mrr: 99.47, Acc@1: 98.98
+[2025-07-10 12:25:38,319 INFO] step: 620, mrr: 99.47, Acc@1: 98.98
+[2025-07-10 12:25:50,484 INFO] {'loss': 0.0137, 'grad_norm': 1.0361846685409546, 'learning_rate': 1.099585062240664e-06, 'epoch': 0.9237536656891495}
+[2025-07-10 12:25:50,698 INFO] step: 630, mrr: 99.48, Acc@1: 98.99
+[2025-07-10 12:25:51,332 INFO] step: 630, mrr: 99.48, Acc@1: 98.99
+[2025-07-10 12:26:03,521 INFO] {'loss': 0.0122, 'grad_norm': 1.590194582939148, 'learning_rate': 8.921161825726142e-07, 'epoch': 0.9384164222873901}
+[2025-07-10 12:26:03,737 INFO] step: 640, mrr: 99.48, Acc@1: 99.0
+[2025-07-10 12:26:04,374 INFO] step: 640, mrr: 99.48, Acc@1: 99.0
+[2025-07-10 12:26:16,574 INFO] {'loss': 0.0109, 'grad_norm': 1.287424087524414, 'learning_rate': 6.846473029045644e-07, 'epoch': 0.9530791788856305}
+[2025-07-10 12:26:16,790 INFO] step: 650, mrr: 99.49, Acc@1: 99.01
+[2025-07-10 12:26:17,425 INFO] step: 650, mrr: 99.49, Acc@1: 99.01
+[2025-07-10 12:26:29,618 INFO] {'loss': 0.009, 'grad_norm': 0.2547227144241333, 'learning_rate': 4.771784232365145e-07, 'epoch': 0.967741935483871}
+[2025-07-10 12:26:29,834 INFO] step: 660, mrr: 99.49, Acc@1: 99.02
+[2025-07-10 12:26:30,470 INFO] step: 660, mrr: 99.49, Acc@1: 99.02
+[2025-07-10 12:26:42,668 INFO] {'loss': 0.0103, 'grad_norm': 1.8279532194137573, 'learning_rate': 2.6970954356846476e-07, 'epoch': 0.9824046920821115}
+[2025-07-10 12:26:42,883 INFO] step: 670, mrr: 99.5, Acc@1: 99.03
+[2025-07-10 12:26:43,520 INFO] step: 670, mrr: 99.5, Acc@1: 99.03
+[2025-07-10 12:26:55,707 INFO] {'loss': 0.0088, 'grad_norm': 1.043994665145874, 'learning_rate': 6.224066390041494e-08, 'epoch': 0.9970674486803519}
+[2025-07-10 12:26:55,922 INFO] step: 680, mrr: 99.5, Acc@1: 99.04
+[2025-07-10 12:26:56,558 INFO] step: 680, mrr: 99.5, Acc@1: 99.04
+[2025-07-10 12:26:58,452 INFO] Saving model checkpoint to trainer_output/checkpoint-682
+[2025-07-10 12:27:03,177 INFO] {'train_runtime': 1049.7754, 'train_samples_per_second': 166.199, 'train_steps_per_second': 0.65, 'train_loss': 0.029093579725086513, 'epoch': 1.0}
+[2025-07-10 12:28:06,824 INFO] Saving model checkpoint to trainer_output
+[2025-07-10 12:28:08,258 INFO] Saving model checkpoint to trainer_output
